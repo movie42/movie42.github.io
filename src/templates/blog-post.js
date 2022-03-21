@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import styled from "styled-components";
 
@@ -19,6 +19,9 @@ const PostBody = styled.div`
     font-size: 1.9rem;
     min-height: 20rem;
     margin-bottom: 5rem;
+    h1 {
+      font-size: 18rem;
+    }
     div {
       span:not(:first-child) {
         font-weight: 500;
@@ -77,13 +80,31 @@ const PostBody = styled.div`
       counter-reset: li;
       li {
         counter-increment: li;
-      }
-      li::before {
-        content: counter(li);
-        color: ${props => props.theme.hlColor_dark};
-        display: inline-block;
-        width: 1em;
-        margin-left: -1em;
+        p {
+          display: inline-block;
+        }
+        &:before {
+          content: counter(li);
+          color: ${props => props.theme.hlColor_dark};
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+        }
+
+        ul {
+          list-style: unset;
+          counter-reset: unset;
+          li {
+            counter-increment: unset;
+            &:before {
+              content: "-";
+              color: ${props => props.theme.hlColor_dark};
+              display: inline-block;
+              width: 1em;
+              margin-left: -1em;
+            }
+          }
+        }
       }
     }
 
@@ -164,16 +185,25 @@ function Template({ data }) {
   const { frontmatter, html } = markdownRemark;
 
   return (
-    <Layout>
+    <>
       <Wrapper>
         <PostBody className="blog-post">
+          <div className="inform-container">
+            <h1>{frontmatter.title}</h1>
+            <div>
+              <span>{frontmatter.date}</span>
+              <span>
+                <Link to="/blog">목록</Link>
+              </span>
+            </div>
+          </div>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </PostBody>
       </Wrapper>
-    </Layout>
+    </>
   );
 }
 

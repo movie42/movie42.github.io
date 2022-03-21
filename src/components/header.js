@@ -1,7 +1,6 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "./Nav";
 import styled from "styled-components";
-import { useState } from "react";
 import { Link } from "gatsby";
 import Logo from "../images/logo.png";
 import { AnimatePresence, motion } from "framer-motion";
@@ -68,6 +67,14 @@ const Header = ({ location }) => {
     menuName: "Menu",
   });
 
+  useEffect(() => {
+    setMenu({
+      initial: null,
+      clicked: true,
+      menuName: "Close",
+    });
+  }, [location.pathname]);
+
   const [disable, setDisable] = useState(false);
 
   const handleMenu = () => {
@@ -109,7 +116,7 @@ const Header = ({ location }) => {
         <button disabled={disable} className="navBtn" onClick={handleMenu}>
           메뉴
         </button>
-        <Nav isActive={menu} />
+        <Nav location={location} isActive={menu} />
       </Headers>
     </AnimatePresence>
   );

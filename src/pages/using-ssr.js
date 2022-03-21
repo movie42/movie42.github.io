@@ -1,12 +1,10 @@
 import * as React from "react";
 import { Link } from "gatsby";
-
-import Layout from "../components/Layout";
 import Seo from "../components/seo";
 
 const UsingSSR = ({ serverData }) => {
   return (
-    <Layout>
+    <>
       <Seo title="" />
       <h1>SSR page</h1>
       <p>Welcome to a server side rendered page with a random dog photo</p>
@@ -18,7 +16,7 @@ const UsingSSR = ({ serverData }) => {
         .
       </p>
       <Link to="/">Go back to the homepage</Link>
-    </Layout>
+    </>
   );
 };
 

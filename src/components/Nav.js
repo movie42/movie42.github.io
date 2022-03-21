@@ -137,6 +137,14 @@ const Nav = ({ isActive }) => {
   const [hoverState, setHoverState] = useState(false);
 
   useEffect(() => {
+    if (isActive.clicked === false) {
+      setNavState(true);
+    } else if (
+      (isActive.initial === null || isActive.clicked === true) &&
+      isActive.clicked === true
+    ) {
+      setNavState(!isActive.clicked);
+    }
     return () => setNavState(!isActive.clicked);
   }, [isActive]);
 

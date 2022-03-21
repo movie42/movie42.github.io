@@ -66,7 +66,7 @@ const Wrapper = styled.li`
   }
 `;
 
-const Post = ({ key, path, title, preview, date, tags }) => {
+const Post = ({ path, title, preview, date, tags }) => {
   return (
     <Wrapper>
       <Link to={path}>

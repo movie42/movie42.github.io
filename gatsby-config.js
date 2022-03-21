@@ -1,17 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `KO HYUNSU PORTPOLIO`,
-    description: ``,
-    author: ``,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `고현수의 블로그`,
+    description: `개발하면서 겪은 것을 이야기로 풀어보는 블로그`,
+    author: `고현수`,
+    siteUrl: `https://movie42.github.io`,
   },
   plugins: [
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -30,6 +28,12 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -57,7 +61,6 @@ module.exports = {
                 host: "localhost",
                 global: false,
               },
-              escapeEntities: {},
             },
           },
         ],
