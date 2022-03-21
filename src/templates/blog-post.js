@@ -1,8 +1,7 @@
+import React from "react";
 import { graphql } from "gatsby";
-import * as React from "react";
-import styled from "styled-components";
 import Layout from "../components/Layout";
-import Seo from "../components/seo";
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   padding: 0 2rem;
@@ -14,16 +13,48 @@ const Wrapper = styled.div`
   }
 `;
 
-const ResumeBody = styled.div`
+const PostBody = styled.div`
   padding: 2rem 0;
-  .resume-content {
+  .inform-container {
+    font-size: 1.9rem;
+    min-height: 20rem;
+    margin-bottom: 5rem;
+    div {
+      span:not(:first-child) {
+        font-weight: 500;
+        margin-left: 1rem;
+        a {
+          color: ${props => props.theme.hlColor};
+          &:hover {
+            color: ${props => props.theme.compColor};
+          }
+        }
+      }
+    }
+    h1 {
+      font-size: 10rem;
+      letter-spacing: -0.3rem;
+      line-height: 1.2;
+      word-break: keep-all;
+      font-weight: 900;
+      color: ${p => p.theme.hlColor_light};
+    }
+    @media (max-width: 1020px) {
+      min-height: 10rem;
+      margin-bottom: 1rem;
+      h1 {
+        font-size: 5rem;
+      }
+    }
+  }
+  .blog-post-content {
     max-width: 102rem;
     margin: 0 auto;
     line-height: 1.8;
     font-size: 1.9rem;
     letter-spacing: -0.1rem;
     h1 {
-      font-size: 13rem;
+      font-size: 4.5rem;
     }
     h2 {
       font-size: 3.8rem;
@@ -128,36 +159,35 @@ const ResumeBody = styled.div`
   }
 `;
 
-const IndexPage = ({ data, location }) => {
+function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 
   return (
-    <Layout location={location}>
-      <Seo title="이력서" />
+    <Layout>
       <Wrapper>
-        <ResumeBody>
+        <PostBody className="blog-post">
           <div
-            className="resume-content"
+            className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
-        </ResumeBody>
+        </PostBody>
       </Wrapper>
     </Layout>
   );
-};
+}
 
-export default IndexPage;
+export default Template;
 
 export const pageQuery = graphql`
-  query {
-    markdownRemark(frontmatter: { slug: { eq: "/" } }) {
+  query ($path: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $path } }) {
       html
       frontmatter {
         date(formatString: "YYYY년 MMMM DD일", locale: "ko-KR")
-        title
         tags
         slug
+        title
       }
     }
   }
