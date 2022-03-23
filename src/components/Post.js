@@ -30,7 +30,7 @@ const Wrapper = styled.li`
         ul {
           display: flex;
           flex-wrap: wrap;
-          color: ${props => props.theme.color.grayColor_dark};
+          color: ${props => props.theme.grayColor_dark};
           margin: 1rem 0;
           li {
             &:not(:first-child) {
@@ -42,20 +42,20 @@ const Wrapper = styled.li`
     }
   }
   &:hover {
-    background-color: ${props => props.theme.color.grayColor_light};
+    background-color: ${props => props.theme.grayColor_light};
     a {
       h3 {
         word-spacing: -0.2rem;
         font-weight: 900;
-        color: ${props => props.theme.color.hlColor};
+        color: ${props => props.theme.hlColor};
         transition: all 0.3s ease-in-out;
       }
     }
     transition: all 0.3s ease-in-out;
   }
 
-  @media ${props => props.theme.sizes.mobileL} {
-    border-bottom: 1px solid ${props => props.theme.color.grayColor};
+  @media (max-width: 450px) {
+    border-bottom: 1px solid ${props => props.theme.grayColor};
     height: unset;
     a {
       h3 {

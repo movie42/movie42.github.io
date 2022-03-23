@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   padding: 0 2rem;
   max-width: 120rem;
   margin: 0 auto;
-  @media ${props => props.theme.sizes.mobileL} {
+  @media (max-width: 450px) {
     max-width: unset;
     margin: 6rem auto 0;
   }
@@ -24,21 +24,21 @@ const PostBody = styled.div`
       line-height: 1.2;
       word-break: keep-all;
       font-weight: 900;
-      color: ${props => props.theme.color.hlColor_light};
+      color: ${props => props.theme.hlColor_light};
     }
     div {
       span:not(:first-child) {
         font-weight: 500;
         margin-left: 1rem;
         a {
-          color: ${props => props.theme.color.hlColor};
+          color: ${props => props.theme.hlColor};
           &:hover {
-            color: ${props => props.theme.color.compColor};
+            color: ${props => props.theme.compColor};
           }
         }
       }
     }
-    @media ${props => props.theme.sizes.mobileL} {
+    @media (max-width: 450px) {
       min-height: 10rem;
       margin-bottom: 1rem;
       h1 {
@@ -69,7 +69,7 @@ const PostBody = styled.div`
       font-size: 1.8rem;
     }
     a {
-      color: ${props => props.theme.color.hlColor};
+      color: ${props => props.theme.hlColor};
     }
 
     ol {
@@ -79,7 +79,7 @@ const PostBody = styled.div`
         counter-increment: li;
         &:before {
           content: counter(li);
-          color: ${props => props.theme.color.hlColor_dark};
+          color: ${props => props.theme.hlColor_dark};
           display: inline-block;
           width: 1em;
           margin-left: -1em;
@@ -93,7 +93,7 @@ const PostBody = styled.div`
             counter-increment: unset;
             &:before {
               content: "-";
-              color: ${props => props.theme.color.hlColor_dark};
+              color: ${props => props.theme.hlColor_dark};
               display: inline-block;
               width: 1em;
               margin-left: -1em;
@@ -109,27 +109,27 @@ const PostBody = styled.div`
       margin: 1.2rem;
       padding: 1rem 4rem;
       border-radius: 0.2rem;
-      background-color: ${props => props.theme.color.grayColor_light};
+      background-color: ${props => props.theme.grayColor_light};
       &::after {
         position: absolute;
         top: 0;
         left: 0;
         width: 1rem;
         height: 100%;
-        background-color: ${props => props.theme.color.hlColor_light};
+        background-color: ${props => props.theme.hlColor_light};
         content: "";
       }
     }
     pre {
       margin: 1.2rem;
       padding: 1rem 2rem;
-      background-color: ${props => props.theme.color.grayColor_light};
+      background-color: ${props => props.theme.grayColor_light};
       code {
-        background-color: ${props => props.theme.color.grayColor_light};
-        color: ${props => props.theme.color.basicColor};
+        background-color: ${props => props.theme.grayColor_light};
+        color: ${props => props.theme.basicColor};
         text-shadow: none;
         .token {
-          background-color: ${props => props.theme.color.grayColor_light};
+          background-color: ${props => props.theme.grayColor_light};
           &.function {
             color: #0945d9;
           }
@@ -172,7 +172,7 @@ const PostBody = styled.div`
         }
       }
     }
-    @media ${props => props.theme.sizes.mobileL} {
+    @media (max-width: 450px) {
       h1,
       h2,
       h3,

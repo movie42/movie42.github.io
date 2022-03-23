@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   padding: 0 2rem;
   max-width: 120rem;
   margin: 0 auto;
-  @media ${props => props.theme.sizes.mobileL} {
+  @media (max-width: 450px) {
     margin: 6rem auto 0;
   }
 `;
@@ -18,7 +18,7 @@ const Title = styled.h1`
   font-weight: 900;
   margin: 0;
   padding: 0;
-  @media ${props => props.theme.sizes.mobileL} {
+  @media (max-width: 450px) {
     font-size: 10rem;
   }
 `;
@@ -38,7 +38,7 @@ const Contents = styled.div`
     margin: 0 auto;
   }
 
-  @media ${props => props.theme.sizes.mobileL} {
+  @media (max-width: 450px) {
     ul {
       grid-template-columns: unset;
     }
@@ -67,19 +67,17 @@ const TagsContainer = styled.div`
 const TagButton = styled.button`
   font-size: 1.8rem;
   cursor: pointer;
-  color: ${props => props.theme.color.whiteColor};
+  color: ${props => props.theme.whiteColor};
   background-color: ${props =>
-    props.selected
-      ? props.theme.color.hlColor
-      : props.theme.color.grayColor_dark};
+    props.selected ? props.theme.hlColor : props.theme.grayColor_dark};
   font-weight: ${props => (props.selected ? 900 : 500)};
   padding: 0.5rem 1rem;
   border-radius: 3rem;
   border: 0;
   min-width: 10rem;
   &:hover {
-    color: ${props => props.theme.color.hlColor};
-    background-color: ${props => props.theme.color.grayColor_light};
+    color: ${props => props.theme.hlColor};
+    background-color: ${props => props.theme.grayColor_light};
   }
 `;
 

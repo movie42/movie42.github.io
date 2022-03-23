@@ -23,7 +23,7 @@ const Headers = styled.header`
     cursor: pointer;
     &:hover {
       font-weight: 900;
-      color: ${props => props.theme.color.hlColor_light};
+      color: ${props => props.theme.hlColor_light};
     }
   }
 `;
@@ -39,14 +39,14 @@ const ImgWrapper = styled(motion.div)`
   height: 6rem;
   border-radius: 6rem;
   overflow: hidden;
-  background-color: ${props => props.theme.color.hlColor_dark};
+  background-color: ${props => props.theme.hlColor_dark};
   transition: all 0.3s ease-in-out;
   &:hover {
     img {
       filter: unset;
       mix-blend-mode: unset;
     }
-    background-color: ${props => props.theme.color.whiteColor};
+    background-color: ${props => props.theme.whiteColor};
     transition: all 0.3s ease-in-out;
   }
 `;

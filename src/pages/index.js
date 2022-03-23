@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   padding: 0 2rem;
   max-width: 120rem;
   margin: 0 auto;
-  @media ${props => props.theme.sizes.mobileL} {
+  @media (max-width: 450px) {
     max-width: unset;
     margin: 6rem auto 0;
   }
@@ -18,7 +18,7 @@ const Title = styled.h1`
   font-weight: 900;
   margin: 0;
   padding: 0;
-  @media ${props => props.theme.sizes.mobileL} {
+  @media (max-width: 450px) {
     font-size: 10rem;
   }
 `;
@@ -28,7 +28,7 @@ const ResumeBody = styled.div`
   .resume-content {
     .bold {
       font-weight: 700;
-      color: ${props => props.theme.color.hlColor};
+      color: ${props => props.theme.hlColor};
     }
     max-width: 102rem;
     margin: 0 auto;
@@ -51,7 +51,7 @@ const ResumeBody = styled.div`
       font-size: 1.8rem;
     }
     a {
-      color: ${props => props.theme.color.hlColor};
+      color: ${props => props.theme.hlColor};
     }
 
     ol {
@@ -64,7 +64,7 @@ const ResumeBody = styled.div`
         counter-increment: li;
         &:before {
           content: counter(li);
-          color: ${props => props.theme.color.hlColor_dark};
+          color: ${props => props.theme.hlColor_dark};
           display: inline-block;
           width: 1em;
           margin-left: -1em;
@@ -76,7 +76,7 @@ const ResumeBody = styled.div`
             counter-increment: unset;
             &:before {
               content: "-";
-              color: ${props => props.theme.color.hlColor_dark};
+              color: ${props => props.theme.hlColor_dark};
               display: inline-block;
               width: 1em;
               margin-left: -1em;
@@ -92,27 +92,27 @@ const ResumeBody = styled.div`
       margin: 1.2rem;
       padding: 1rem 4rem;
       border-radius: 0.2rem;
-      background-color: ${props => props.theme.color.grayColor_light};
+      background-color: ${props => props.theme.grayColor_light};
       &::after {
         position: absolute;
         top: 0;
         left: 0;
         width: 1rem;
         height: 100%;
-        background-color: ${props => props.theme.color.hlColor_light};
+        background-color: ${props => props.theme.hlColor_light};
         content: "";
       }
     }
     pre {
       margin: 1.2rem;
       padding: 1rem 2rem;
-      background-color: ${props => props.theme.color.grayColor_light};
+      background-color: ${props => props.theme.grayColor_light};
       code {
-        background-color: ${props => props.theme.color.grayColor_light};
-        color: ${props => props.theme.color.basicColor};
+        background-color: ${props => props.theme.grayColor_light};
+        color: ${props => props.theme.basicColor};
         text-shadow: none;
         .token {
-          background-color: ${props => props.theme.color.grayColor_light};
+          background-color: ${props => props.theme.grayColor_light};
           &.function {
             color: #0945d9;
           }

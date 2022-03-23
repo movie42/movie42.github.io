@@ -4,9 +4,10 @@ import styled from "styled-components";
 import Logo from "../images/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 import useMousePosition from "../hooks/useMousePosition";
+import { sizes } from "../theme/sizes";
 
 const Wrapper = styled(motion.nav)`
-  @media ${props => props.theme.sizes.mobileL} {
+  @media (max-width: 450px) {
     padding: 0;
   }
   display: none;
@@ -14,7 +15,7 @@ const Wrapper = styled(motion.nav)`
   overflow-y: auto;
   align-items: center;
   justify-content: center;
-  background-color: ${props => props.theme.color.hlColor};
+  background-color: ${props => props.theme.hlColor};
   padding-left: 4rem;
   height: 100vh;
   width: 100vw;
@@ -49,7 +50,7 @@ const Item = styled(motion.div).attrs(() => {
 `;
 
 const Path = styled(Link)`
-  @media ${props => props.theme.sizes.mobileL} {
+  @media (max-width: 450px) {
     font-size: 11.5rem;
   }
   position: absolute;
@@ -65,10 +66,10 @@ const Path = styled(Link)`
   box-sizing: border-box;
   &:hover {
     font-weight: 900;
-    color: ${props => props.theme.color.whiteColor};
+    color: ${props => props.theme.whiteColor};
   }
   &:active {
-    color: ${props => props.theme.color.whiteColor};
+    color: ${props => props.theme.whiteColor};
   }
 `;
 
@@ -83,7 +84,7 @@ const ImgWrapper = styled(motion.div)`
   height: 13rem;
   border-radius: 6rem;
   overflow: hidden;
-  background-color: ${props => props.theme.color.hlColor_dark};
+  background-color: ${props => props.theme.hlColor_dark};
 `;
 
 const Img = styled.img`
