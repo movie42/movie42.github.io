@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import Logo from "../images/logo.png";
@@ -119,30 +119,27 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.3,
+      delay: 0.2,
+      type: "tween",
     },
   },
   exit: {
     opacity: 0,
     y: 150,
     transition: {
-      delay: 0.3,
+      delay: 0.2,
+      type: "tween",
     },
   },
 };
 
 const Nav = ({ isActive }) => {
   const { x, y } = useMousePosition();
-  const [navState, setNavState] = useState(false);
   const [hoverState, setHoverState] = useState(false);
-
-  useEffect(() => {
-    return () => setNavState(!isActive.clicked);
-  }, [isActive]);
 
   return (
     <AnimatePresence>
-      {navState && (
+      {isActive && (
         <Wrapper
           variants={navVariant}
           initial="hidden"

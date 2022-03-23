@@ -5,6 +5,7 @@ module.exports = {
     author: ``,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
+  pathPrefix: `/blog`,
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -30,6 +31,12 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {

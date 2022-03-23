@@ -1,7 +1,6 @@
 import { graphql } from "gatsby";
 import * as React from "react";
 import styled from "styled-components";
-import Layout from "../components/Layout";
 import Seo from "../components/seo";
 
 const Wrapper = styled.div`
@@ -130,10 +129,10 @@ const ResumeBody = styled.div`
 
 const IndexPage = ({ data, location }) => {
   const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+  const { html } = markdownRemark;
 
   return (
-    <Layout location={location}>
+    <>
       <Seo title="이력서" />
       <Wrapper>
         <ResumeBody>
@@ -143,7 +142,7 @@ const IndexPage = ({ data, location }) => {
           />
         </ResumeBody>
       </Wrapper>
-    </Layout>
+    </>
   );
 };
 
@@ -153,12 +152,6 @@ export const pageQuery = graphql`
   query {
     markdownRemark(frontmatter: { slug: { eq: "/" } }) {
       html
-      frontmatter {
-        date(formatString: "YYYY년 MMMM DD일", locale: "ko-KR")
-        title
-        tags
-        slug
-      }
     }
   }
 `;

@@ -1,6 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
-import Layout from "../components/Layout";
+import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -19,6 +18,14 @@ const PostBody = styled.div`
     font-size: 1.9rem;
     min-height: 20rem;
     margin-bottom: 5rem;
+    h1 {
+      font-size: 13rem;
+      letter-spacing: -0.3rem;
+      line-height: 1.2;
+      word-break: keep-all;
+      font-weight: 900;
+      color: ${p => p.theme.hlColor_light};
+    }
     div {
       span:not(:first-child) {
         font-weight: 500;
@@ -31,14 +38,7 @@ const PostBody = styled.div`
         }
       }
     }
-    h1 {
-      font-size: 10rem;
-      letter-spacing: -0.3rem;
-      line-height: 1.2;
-      word-break: keep-all;
-      font-weight: 900;
-      color: ${p => p.theme.hlColor_light};
-    }
+
     @media (max-width: 1020px) {
       min-height: 10rem;
       margin-bottom: 1rem;
@@ -77,13 +77,29 @@ const PostBody = styled.div`
       counter-reset: li;
       li {
         counter-increment: li;
-      }
-      li::before {
-        content: counter(li);
-        color: ${props => props.theme.hlColor_dark};
-        display: inline-block;
-        width: 1em;
-        margin-left: -1em;
+        &:before {
+          content: counter(li);
+          color: ${props => props.theme.hlColor_dark};
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+        }
+        p {
+          display: inline-block;
+        }
+        ul {
+          counter-reset: unset;
+          li {
+            counter-increment: unset;
+            &:before {
+              content: "-";
+              color: ${props => props.theme.hlColor_dark};
+              display: inline-block;
+              width: 1em;
+              margin-left: -1em;
+            }
+          }
+        }
       }
     }
 
@@ -164,16 +180,25 @@ function Template({ data }) {
   const { frontmatter, html } = markdownRemark;
 
   return (
-    <Layout>
+    <>
       <Wrapper>
         <PostBody className="blog-post">
+          <div className="inform-container">
+            <h1>{frontmatter.title}</h1>
+            <div>
+              <span>{frontmatter.date}</span>
+              <span>
+                <Link to="/blog">목록</Link>
+              </span>
+            </div>
+          </div>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </PostBody>
       </Wrapper>
-    </Layout>
+    </>
   );
 }
 

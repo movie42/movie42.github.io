@@ -1,7 +1,6 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "./Nav";
 import styled from "styled-components";
-import { useState } from "react";
 import { Link } from "gatsby";
 import Logo from "../images/logo.png";
 import { AnimatePresence, motion } from "framer-motion";
@@ -62,41 +61,15 @@ const Img = styled(motion.img)`
 `;
 
 const Header = ({ location }) => {
-  const [menu, setMenu] = useState({
-    initial: false,
-    clicked: null,
-    menuName: "Menu",
-  });
-
-  const [disable, setDisable] = useState(false);
+  const [menu, setMenu] = useState(false);
 
   const handleMenu = () => {
-    handleDisable();
-    if (menu.initial === false) {
-      setMenu({
-        initial: null,
-        clicked: true,
-        menuName: "Close",
-      });
-    } else if (menu.clicked === true) {
-      setMenu({
-        clicked: !menu.clicked,
-        menuName: "Menu",
-      });
-    } else if (menu.clicked === false) {
-      setMenu({
-        clicked: !menu.clicked,
-        menuName: "Close",
-      });
-    }
+    setMenu(menu => !menu);
   };
 
-  const handleDisable = () => {
-    setDisable(!disable);
-    setTimeout(() => {
-      setDisable(false);
-    }, 1200);
-  };
+  useEffect(() => {
+    return () => setMenu(false);
+  }, [location.pathname]);
 
   return (
     <AnimatePresence>
@@ -106,10 +79,10 @@ const Header = ({ location }) => {
             <Img src={Logo} alt="logo" />
           </Link>
         </ImgWrapper>
-        <button disabled={disable} className="navBtn" onClick={handleMenu}>
+        <button className="navBtn" onClick={handleMenu}>
           메뉴
         </button>
-        <Nav isActive={menu} />
+        <Nav location={location} isActive={menu} />
       </Headers>
     </AnimatePresence>
   );

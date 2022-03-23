@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
 import Post from "../components/Post";
 import Seo from "../components/seo";
 
@@ -87,7 +86,7 @@ const Blog = ({ data }) => {
       return;
     }
     setSelectItem(prev => ({ ...prev }));
-  }, [selectItem.itemList]);
+  }, [selectItem.itemList, selectItem.tag, edges]);
 
   const handleTagsList = e => {
     const target = e.target;
@@ -110,7 +109,7 @@ const Blog = ({ data }) => {
   };
 
   return (
-    <Layout>
+    <>
       <Seo title="블로그" />
       <Wrapper>
         <InfomContainer>
@@ -160,7 +159,7 @@ const Blog = ({ data }) => {
           </ul>
         </Contents>
       </Wrapper>
-    </Layout>
+    </>
   );
 };
 
