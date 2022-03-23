@@ -61,7 +61,25 @@ const Img = styled(motion.img)`
 `;
 
 const Header = ({ location }) => {
+<<<<<<< HEAD
   const [menu, setMenu] = useState(false);
+=======
+  const [menu, setMenu] = useState({
+    initial: false,
+    clicked: null,
+    menuName: "Menu",
+  });
+
+  useEffect(() => {
+    setMenu({
+      initial: null,
+      clicked: true,
+      menuName: "Close",
+    });
+  }, [location.pathname]);
+
+  const [disable, setDisable] = useState(false);
+>>>>>>> 7fe2f870cb2f07f44f0c2e104c94360a5cef831b
 
   const handleMenu = () => {
     setMenu(menu => !menu);

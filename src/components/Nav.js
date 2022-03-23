@@ -137,6 +137,21 @@ const Nav = ({ isActive }) => {
   const { x, y } = useMousePosition();
   const [hoverState, setHoverState] = useState(false);
 
+<<<<<<< HEAD
+=======
+  useEffect(() => {
+    if (isActive.clicked === false) {
+      setNavState(true);
+    } else if (
+      (isActive.initial === null || isActive.clicked === true) &&
+      isActive.clicked === true
+    ) {
+      setNavState(!isActive.clicked);
+    }
+    return () => setNavState(!isActive.clicked);
+  }, [isActive]);
+
+>>>>>>> 7fe2f870cb2f07f44f0c2e104c94360a5cef831b
   return (
     <AnimatePresence>
       {isActive && (
