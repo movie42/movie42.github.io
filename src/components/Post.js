@@ -7,12 +7,7 @@ const Wrapper = styled.li`
   height: 34rem;
   overflow: hidden;
   margin-bottom: 1.5rem;
-  @media (max-width: 1020px) {
-    border-bottom: 1px solid ${props => props.theme.grayColor};
-    height: 27rem;
-  }
   padding: 2rem;
-
   a {
     display: grid;
     height: inherit;
@@ -23,9 +18,6 @@ const Wrapper = styled.li`
       overflow: hidden;
       font-size: 2.8rem;
       transition: all 0.3s ease-in-out;
-      @media (max-width: 1020px) {
-        height: unset;
-      }
     }
     p {
       height: 15.2rem;
@@ -38,7 +30,7 @@ const Wrapper = styled.li`
         ul {
           display: flex;
           flex-wrap: wrap;
-          color: ${props => props.theme.grayColor_dark};
+          color: ${props => props.theme.color.grayColor_dark};
           margin: 1rem 0;
           li {
             &:not(:first-child) {
@@ -47,22 +39,30 @@ const Wrapper = styled.li`
           }
         }
       }
-      @media (max-width: 1020px) {
-        align-self: unset;
-      }
     }
   }
   &:hover {
-    background-color: ${props => props.theme.grayColor_light};
+    background-color: ${props => props.theme.color.grayColor_light};
     a {
       h3 {
         word-spacing: -0.2rem;
         font-weight: 900;
-        color: ${props => props.theme.hlColor};
+        color: ${props => props.theme.color.hlColor};
         transition: all 0.3s ease-in-out;
       }
     }
     transition: all 0.3s ease-in-out;
+  }
+
+  @media ${props => props.theme.sizes.mobileL} {
+    border-bottom: 1px solid ${props => props.theme.color.grayColor};
+    height: unset;
+    a {
+      h3 {
+        height: unset;
+        margin-bottom: 2rem;
+      }
+    }
   }
 `;
 

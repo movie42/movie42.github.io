@@ -4,16 +4,23 @@ import { graphql } from "gatsby";
 import Post from "../components/Post";
 import Seo from "../components/seo";
 
+const Wrapper = styled.div`
+  padding: 0 2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  @media ${props => props.theme.sizes.mobileL} {
+    margin: 6rem auto 0;
+  }
+`;
+
 const Title = styled.h1`
   font-size: 13rem;
   font-weight: 900;
   margin: 0;
   padding: 0;
-`;
-const Wrapper = styled.div`
-  padding: 0 2rem;
-  max-width: 120rem;
-  margin: 0 auto;
+  @media ${props => props.theme.sizes.mobileL} {
+    font-size: 10rem;
+  }
 `;
 
 const InfomContainer = styled.div`
@@ -27,11 +34,14 @@ const Contents = styled.div`
   ul {
     display: grid;
     grid-template-columns: repeat(3, 3fr);
-    @media (max-width: 1020px) {
-      grid-template-columns: unset;
-    }
     padding: 0;
     margin: 0 auto;
+  }
+
+  @media ${props => props.theme.sizes.mobileL} {
+    ul {
+      grid-template-columns: unset;
+    }
   }
 `;
 
@@ -57,17 +67,19 @@ const TagsContainer = styled.div`
 const TagButton = styled.button`
   font-size: 1.8rem;
   cursor: pointer;
-  color: ${props => props.theme.whiteColor};
+  color: ${props => props.theme.color.whiteColor};
   background-color: ${props =>
-    props.selected ? props.theme.hlColor : props.theme.grayColor_dark};
+    props.selected
+      ? props.theme.color.hlColor
+      : props.theme.color.grayColor_dark};
   font-weight: ${props => (props.selected ? 900 : 500)};
   padding: 0.5rem 1rem;
   border-radius: 3rem;
   border: 0;
   min-width: 10rem;
   &:hover {
-    color: ${props => props.theme.hlColor};
-    background-color: ${props => props.theme.grayColor_light};
+    color: ${props => props.theme.color.hlColor};
+    background-color: ${props => props.theme.color.grayColor_light};
   }
 `;
 
@@ -114,6 +126,7 @@ const Blog = ({ data }) => {
       <Wrapper>
         <InfomContainer>
           <Title>블로그</Title>
+          <p>개발을 하면서 겪은 소소한 것들</p>
           <TagsContainer>
             <h3>태그</h3>
             <ul>
@@ -127,16 +140,18 @@ const Blog = ({ data }) => {
                   초기화
                 </TagButton>
               </li>
-              {group?.map(value => (
-                <li key={value.fieldValue}>
-                  <TagButton
-                    type="button"
-                    onClick={handleTagsList}
-                    data-id={value.fieldValue}
-                    selected={selectItem.tag === value.fieldValue}
-                  >{`${value.fieldValue} ${value.totalCount}`}</TagButton>
-                </li>
-              ))}
+              {group
+                ?.filter(value => value.fieldValue !== "이력서")
+                .map(value => (
+                  <li key={value.fieldValue}>
+                    <TagButton
+                      type="button"
+                      onClick={handleTagsList}
+                      data-id={value.fieldValue}
+                      selected={selectItem.tag === value.fieldValue}
+                    >{`${value.fieldValue} ${value.totalCount}`}</TagButton>
+                  </li>
+                ))}
             </ul>
           </TagsContainer>
         </InfomContainer>

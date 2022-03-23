@@ -6,11 +6,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import useMousePosition from "../hooks/useMousePosition";
 
 const Wrapper = styled(motion.nav)`
+  @media ${props => props.theme.sizes.mobileL} {
+    padding: 0;
+  }
   display: none;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   align-items: center;
   justify-content: center;
-  background-color: ${props => props.theme.hlColor};
+  background-color: ${props => props.theme.color.hlColor};
   padding-left: 4rem;
   height: 100vh;
   width: 100vw;
@@ -31,9 +35,6 @@ const ListItem = styled(motion.li)`
   overflow: hidden;
   width: 40rem;
   height: 17rem;
-  a {
-    position: absolute;
-  }
 `;
 
 const Item = styled(motion.div).attrs(() => {
@@ -43,9 +44,20 @@ const Item = styled(motion.div).attrs(() => {
     animate: "animation",
     exit: "exit",
   };
-})``;
+})`
+  text-align: center;
+`;
 
 const Path = styled(Link)`
+  @media ${props => props.theme.sizes.mobileL} {
+    font-size: 11.5rem;
+  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
   display: block;
   font-size: 13rem;
   font-weight: 300;
@@ -53,10 +65,10 @@ const Path = styled(Link)`
   box-sizing: border-box;
   &:hover {
     font-weight: 900;
-    color: ${props => props.theme.whiteColor};
+    color: ${props => props.theme.color.whiteColor};
   }
   &:active {
-    color: ${props => props.theme.whiteColor};
+    color: ${props => props.theme.color.whiteColor};
   }
 `;
 
@@ -71,7 +83,7 @@ const ImgWrapper = styled(motion.div)`
   height: 13rem;
   border-radius: 6rem;
   overflow: hidden;
-  background-color: ${props => props.theme.hlColor_dark};
+  background-color: ${props => props.theme.color.hlColor_dark};
 `;
 
 const Img = styled.img`

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "hyunsu-blog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "내가 쓰고 싶은 글 모음",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "HYUNSU, KO<movie3342@gmail.com>",
   "dependencies": {
     "@fontsource/noto-sans-kr": "^4.5.5",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -53,9 +53,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/movie42/movie42.github.io"
   }
 }

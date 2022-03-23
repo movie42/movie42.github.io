@@ -6,9 +6,9 @@ const Wrapper = styled.div`
   padding: 0 2rem;
   max-width: 120rem;
   margin: 0 auto;
-  @media (max-width: 1020px) {
+  @media ${props => props.theme.sizes.mobileL} {
     max-width: unset;
-    padding: 9rem 2rem;
+    margin: 6rem auto 0;
   }
 `;
 
@@ -24,29 +24,29 @@ const PostBody = styled.div`
       line-height: 1.2;
       word-break: keep-all;
       font-weight: 900;
-      color: ${p => p.theme.hlColor_light};
+      color: ${p => p.theme.color.hlColor_light};
     }
     div {
       span:not(:first-child) {
         font-weight: 500;
         margin-left: 1rem;
         a {
-          color: ${props => props.theme.hlColor};
+          color: ${props => props.theme.color.hlColor};
           &:hover {
-            color: ${props => props.theme.compColor};
+            color: ${props => props.theme.color.compColor};
           }
         }
       }
     }
-
-    @media (max-width: 1020px) {
+    @media ${props => props.theme.sizes.mobileL} {
       min-height: 10rem;
       margin-bottom: 1rem;
       h1 {
-        font-size: 5rem;
+        font-size: 7rem;
       }
     }
   }
+
   .blog-post-content {
     max-width: 102rem;
     margin: 0 auto;
@@ -69,7 +69,7 @@ const PostBody = styled.div`
       font-size: 1.8rem;
     }
     a {
-      color: ${props => props.theme.hlColor};
+      color: ${props => props.theme.color.hlColor};
     }
 
     ol {
@@ -79,7 +79,7 @@ const PostBody = styled.div`
         counter-increment: li;
         &:before {
           content: counter(li);
-          color: ${props => props.theme.hlColor_dark};
+          color: ${props => props.theme.color.hlColor_dark};
           display: inline-block;
           width: 1em;
           margin-left: -1em;
@@ -93,7 +93,7 @@ const PostBody = styled.div`
             counter-increment: unset;
             &:before {
               content: "-";
-              color: ${props => props.theme.hlColor_dark};
+              color: ${props => props.theme.color.hlColor_dark};
               display: inline-block;
               width: 1em;
               margin-left: -1em;
@@ -109,27 +109,27 @@ const PostBody = styled.div`
       margin: 1.2rem;
       padding: 1rem 4rem;
       border-radius: 0.2rem;
-      background-color: ${props => props.theme.grayColor_light};
+      background-color: ${props => props.theme.color.grayColor_light};
       &::after {
         position: absolute;
         top: 0;
         left: 0;
         width: 1rem;
         height: 100%;
-        background-color: ${props => props.theme.hlColor_light};
+        background-color: ${props => props.theme.color.hlColor_light};
         content: "";
       }
     }
     pre {
       margin: 1.2rem;
       padding: 1rem 2rem;
-      background-color: ${props => props.theme.grayColor_light};
+      background-color: ${props => props.theme.color.grayColor_light};
       code {
-        background-color: ${props => props.theme.grayColor_light};
-        color: ${props => props.theme.basicColor};
+        background-color: ${props => props.theme.color.grayColor_light};
+        color: ${props => props.theme.color.basicColor};
         text-shadow: none;
         .token {
-          background-color: ${props => props.theme.grayColor_light};
+          background-color: ${props => props.theme.color.grayColor_light};
           &.function {
             color: #0945d9;
           }
@@ -170,6 +170,30 @@ const PostBody = styled.div`
             }
           }
         }
+      }
+    }
+    @media ${props => props.theme.sizes.mobileL} {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        line-height: 1.2;
+      }
+      h1 {
+        font-size: 3.8rem;
+      }
+      h2 {
+        font-size: 3.4rem;
+      }
+      h3 {
+        font-size: 3rem;
+      }
+      h4 {
+        font-size: 2.4rem;
+      }
+      h5 {
+        font-size: 1.8rem;
       }
     }
   }

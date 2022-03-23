@@ -20,7 +20,7 @@ html {
 body {
     font-size:1.6rem;
     font-family: 'Noto Sans KR', sans-serif;
-    color:${props => props.theme.basicColor}
+    color:${props => props.theme.color.basicColor}
 }
 
 
@@ -30,7 +30,7 @@ ul, ol, dl, li {
 
 a{
     text-decoration:none;
-    color:${props => props.theme.basicColor}
+    color:${props => props.theme.color.basicColor}
 }
 `;
 
