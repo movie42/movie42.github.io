@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 
@@ -24,7 +24,7 @@ const PostBody = styled.div`
       line-height: 1.2;
       word-break: keep-all;
       font-weight: 900;
-      color: ${p => p.theme.color.hlColor_light};
+      color: ${props => props.theme.color.hlColor_light};
     }
     div {
       span:not(:first-child) {

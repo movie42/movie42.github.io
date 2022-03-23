@@ -5,7 +5,6 @@ module.exports = {
     author: `고현수`,
     siteUrl: `https://movie42.github.io`,
   },
-  pathPrefix: `/blog`,
   plugins: [
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-react-helmet`,

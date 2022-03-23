@@ -1,9 +1,9 @@
 {
-  "name": "hyunsu-blog",
+  "name": "hyunsublog",
   "private": true,
   "description": "내가 쓰고 싶은 글 모음",
   "version": "0.1.0",
-  "author": "HYUNSU, KO<movie3342@gmail.com>",
+  "author": "HYUNSU, KO <movie3342@gmail.com>",
   "dependencies": {
     "@fontsource/noto-sans-kr": "^4.5.5",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
