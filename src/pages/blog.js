@@ -38,7 +38,7 @@ const Contents = styled.div`
     margin: 0 auto;
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 1020px) {
     ul {
       grid-template-columns: unset;
     }
@@ -93,9 +93,7 @@ const Blog = ({ data }) => {
   useEffect(() => {
     if (selectItem.tag === "") {
       setSelectItem(prev => ({ ...prev, itemList: edges }));
-      return;
     }
-    setSelectItem(prev => ({ ...prev }));
   }, [selectItem.itemList, selectItem.tag, edges]);
 
   const handleTagsList = e => {

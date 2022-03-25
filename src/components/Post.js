@@ -54,7 +54,7 @@ const Wrapper = styled.li`
     transition: all 0.3s ease-in-out;
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 1020px) {
     border-bottom: 1px solid ${props => props.theme.grayColor};
     height: unset;
     a {

@@ -68,7 +68,7 @@ const Header = ({ location }) => {
   };
 
   useEffect(() => {
-    return () => setMenu(false);
+    setMenu(false);
   }, [location.pathname]);
 
   return (

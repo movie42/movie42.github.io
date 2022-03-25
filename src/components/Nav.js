@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Logo from "../images/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 import useMousePosition from "../hooks/useMousePosition";
-import { sizes } from "../theme/sizes";
 
 const Wrapper = styled(motion.nav)`
   @media (max-width: 450px) {

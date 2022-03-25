@@ -11,9 +11,6 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-styled-components`,
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
