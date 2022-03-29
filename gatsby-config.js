@@ -39,7 +39,7 @@ module.exports = {
             options: {
               classPrefix: "language-",
               inlineCodeMarker: null,
-              aliases: { sh: "zsh" },
+              aliases: { sh: "shell" },
               showLineNumbers: false,
               noInlineHighlight: false,
               languageExtensions: [

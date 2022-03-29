@@ -15,11 +15,11 @@ tags: ["javascript", "react", "hooks"]
 
 1. 처음부터 리액트를 세팅하는 방법도 있다. 아티클을 참고하는 편이 좋다.
 
-[Creating your React project from scratch without create-react-app: The Complete Guide.](https://dev.to/underscorecode/creating-your-react-project-from-scratch-without-create-react-app-the-complete-guide-4kbc)
+   - <a href="https://dev.to/underscorecode/creating-your-react-project-from-scratch-without-create-react-app-the-complete-guide-4kbc" target="_blank">Creating your React project from scratch without create-react-app: The Complete Guide.</a>
 
 2. create-react-app
 
-```zsh
+```shell
 $ npx create-react-app your-project-name
 $ cd your-project-name
 $ npm start
@@ -27,7 +27,7 @@ $ npm start
 
 3. create-react-app with Typescript
 
-```zsh
+```shell
 $ npx create-react-app your-project-name --template typescript
 $ cd your-project-name
 $ npm start
@@ -35,7 +35,7 @@ $ npm start
 
 4. react with vite
 
-```zsh
+```shell
 $ npm create vite@latest
 // 나에게 맞는 환경 선택
 $ cd my-project
@@ -52,8 +52,7 @@ React Hook은 [React v16.8부터 React 요소로 추가](https://ko.reactjs.org/
 1. 최상위 레벨에서만 사용해야한다. 반복문, 조건문, 중첨 함수 내에서 사용하지 말 것!
 2. React 함수 컴포넌트 안에서만 호출할 것!(custom hook 예외) 일반 자바스크립트 함수 내에 포함되면 안된다.
 
-> [✌️ Hook 사용 규칙](https://ko.reactjs.org/docs/hooks-overview.html#rules-of-hooks)  
-> [Hook의 규칙](https://ko.reactjs.org/docs/hooks-rules.html)
+> [✌️ Hook 사용 규칙](https://ko.reactjs.org/docs/hooks-overview.html#rules-of-hooks)
 
 ### useState
 
@@ -117,11 +116,8 @@ useEffect는 매 랜더링 후 실행된다.
 기본적인 usage는 다음과 같다.
 
 1. effect 두번째 값으로 '의존성 배열'이 들어간다. 배열에 들어가는 값은 이펙트에게 무엇이 변하는지 알려주어 이펙트가 실행되도록 하게 한다.
-
 2. effect 안에서 의존하는 값은 반드시 의존성 배열에 입력되어야한다. 그렇지 않으면 의도한대로 어플리케이션이 동작하지 않을 수 있다.
-
 3. 만약 랜더링 시점에서 한번만 실행되고 싶다면 의존성 배열에 아무런 값을 추가하지 않을 수 있다.
-
 4. 예시
 
 ```jsx
@@ -376,16 +372,15 @@ useReducer는 Proxy와 많이 닮았다고 생각했다.
 
 1. [노마드 코더 - ReactJS로 영화 앱 만들어보기](https://nomadcoders.co/react-for-beginners/lobby)
 
-- 개인적으로 가장 좋았던 강의 React 기초부터 친절하게 알려준다. 그 밖에 무료 강의들이 정말 많다.
+   - 개인적으로 가장 좋았던 강의 React 기초부터 친절하게 알려준다. 그 밖에 무료 강의들이 정말 많다.
 
 2. [Conding Addict - React Projects](https://youtu.be/ly3m6mv5qvg)
 
-- React Hook을 배웠다면 반복해서 만들어보기 좋다. 보면서 따라만드는 것도 좋지만 완성된 것을 보고 먼저 만들어보고 막혔거나 노하우를 알고 싶으면 세부 사항을 보는게 좋은 것 같다.
+   - React Hook을 배웠다면 반복해서 만들어보기 좋다. 보면서 따라만드는 것도 좋지만 완성된 것을 보고 먼저 만들어보고 막혔거나 노하우를 알고 싶으면 세부 사항을 보는게 좋은 것 같다.
 
 3. [코드 스테이츠 - React Hook 알아보기](https://youtube.com/playlist?list=PLAHa1zfLtLiMukrBDWr-o0q-At7oARwXv)
 
-- ToDo App을 만들면서 useState, useEffect, useContext, useReducer 사용 방법을 배우게 된다.
+   - ToDo App을 만들면서 useState, useEffect, useContext, useReducer 사용 방법을 배우게 된다.
 
 4. [벨로퍼트와 함께하는 모던 리액트](https://react.vlpt.us/)
-
-- 설명이 너무 잘 되어있다. React Hook 공부 할 때 많이 봤다.
+   - 설명이 너무 잘 되어있다. React Hook 공부 할 때 많이 봤다.
