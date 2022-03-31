@@ -148,7 +148,13 @@ export const useFetch = ({
 };
 ```
 
-튜플로 데이터를 리턴하는게 가장 어려웠다. 처음에는 이런식으로 interface를 만들고 return을 지정했다.
+option을 useState처럼 지정하는 역할을 하는 함수가 필요했다. 처음에는 useState에서 setState를 밖으로 보내서 했지만 로직이 2% 부족했다. 왜냐하면 useEffet에 state의 변화를 감지하도록 설계하더라도 일단 한번은 실행하기 때문이다. 그래서 어떻게 수정할 수 있을까 찾다가 Youtube에서 useFetch를 만드는 튜토리얼을 찾았다.
+
+> [Making a Custom Hook - usefetch Hook in React](https://www.youtube.com/watch?v=nJxpJ3wks90&t=205s)
+
+Loading이 false일 때, useEffect에서 동작을 막아준다. 그럼 전체 로직을 최초에 실행하지 않는다. 대신 setOptions 함수를 외부에서 호출했을 때, isLoading이 true가 되면서 fetch를 진행한다. 나머지 로직은 처음과 거의 비슷하다.
+
+하지만 튜플로 데이터를 리턴하는게 가장 어려웠다. typescript에서 계속 불만을 표시했기 때문이다. 처음에는 아래 코드처럼 interface를 만들고 return을 지정했다.
 
 ```tsx
 interface IUseFetchReturnValue {
@@ -190,7 +196,7 @@ export const useFetch = ({
 
 ## 마치며
 
-Typescript는 사람이 할 수 있는 실수를 미리 막아주기 때문에 매우 편리하다. 처음 사용할 때, 빨간줄이 너무 많아서 좀 어려웠지만 다행히 vscode가 이유를 알려주기 때문에 그나마 빠르게 해결할 수 있었다. 그리고 구글에 자료가 너무 많아서 그 자료를 참고하면 생각보다 쓸만한 어플리케이션을 만들 수 있을 것 같다.
+Typescript는 사람이 할 수 있는 실수를 미리 막아주기 때문에 매우 편리하다. 처음 사용할 때, 빨간줄이 너무 많아서 좀 어려웠지만 다행히 vscode가 이유를 알려주기 때문에 그나마 빠르게 해결할 수 있었다. 그리고 구글에 자료가 너무 많아서 그 자료를 참고하면 생각보다 쓸만한 어플리케이션을 만들 수 있을 것 같다. Appendix에서 내가 생각했을 때, 좋다고 생각한 것을 공유했다.
 
 ## Appendix
 
