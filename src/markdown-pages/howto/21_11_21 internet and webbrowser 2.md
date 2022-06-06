@@ -54,11 +54,3 @@ tags: ["web", "internet", "web browser"]
 > [인터넷은 어떻게 동작하는가?](https://developer.mozilla.org/ko/docs/Learn/Common_questions/How_does_the_Internet_work)  
 > [웹의 동작 방식](https://developer.mozilla.org/ko/docs/Learn/Getting_started_with_the_web/How_the_Web_works)  
 > [브라우저는 어떻게 동작하는가?](https://d2.naver.com/helloworld/59361)
-
-https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines
-
-https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server
-
-https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server
-
-https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_much_does_it_cost
