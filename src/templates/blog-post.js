@@ -202,7 +202,7 @@ const PostBody = styled.div`
 function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-
+  console.log(html);
   return (
     <>
       <Wrapper>
