@@ -170,7 +170,7 @@ const Nav = ({ isActive }) => {
             <Img src={Logo} alt="logo" />
           </ImgWrapper>
           <List>
-            <ListItem
+            {/* <ListItem
               onHoverStart={() => setHoverState(true)}
               onHoverEnd={() => setHoverState(false)}
             >
@@ -179,7 +179,7 @@ const Nav = ({ isActive }) => {
                   이력서
                 </Path>
               </Item>
-            </ListItem>
+            </ListItem> */}
             <ListItem>
               <Item>
                 <Path activeStyle={activeStyle} to="/blog">

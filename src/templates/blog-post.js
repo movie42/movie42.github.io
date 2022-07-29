@@ -1,6 +1,7 @@
 import * as React from "react";
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
+import Comments from "../gatsby-theme-nehalem/componets/comments";
 
 const Wrapper = styled.div`
   padding: 0 2rem;
@@ -54,6 +55,7 @@ const PostBody = styled.div`
     font-size: 1.9rem;
     letter-spacing: -0.1rem;
     h1 {
+      color: #0070ff;
       font-size: 4.5rem;
     }
     h2 {
@@ -72,10 +74,21 @@ const PostBody = styled.div`
       color: ${props => props.theme.hlColor};
     }
 
+    ul {
+      li {
+        list-style: disc;
+        ul {
+          li {
+            list-style: circle;
+          }
+        }
+      }
+    }
     ol {
-      list-style: none;
+      list-style: disc;
       counter-reset: li;
       li {
+        position: relative;
         counter-increment: li;
         &:before {
           content: counter(li);
@@ -84,6 +97,16 @@ const PostBody = styled.div`
           width: 1em;
           margin-left: -1em;
         }
+        &:after {
+          position: absolute;
+          bottom: 0.6rem;
+          left: 0;
+          content: ".";
+          color: black;
+          display: inline-block;
+          width: 1em;
+          margin: -0.7rem;
+        }
         p {
           display: inline-block;
         }
@@ -91,13 +114,6 @@ const PostBody = styled.div`
           counter-reset: unset;
           li {
             counter-increment: unset;
-            &:before {
-              content: "-";
-              color: ${props => props.theme.hlColor_dark};
-              display: inline-block;
-              width: 1em;
-              margin-left: -1em;
-            }
           }
         }
       }
@@ -114,7 +130,7 @@ const PostBody = styled.div`
         position: absolute;
         top: 0;
         left: 0;
-        width: 1rem;
+        width: 0.8rem;
         height: 100%;
         background-color: ${props => props.theme.hlColor_light};
         content: "";
@@ -123,18 +139,20 @@ const PostBody = styled.div`
     pre {
       margin: 1.2rem;
       padding: 1rem 2rem;
-      background-color: ${props => props.theme.grayColor_light};
+      background-color: #1b1e2b;
+      border-radius: 1.6rem;
       code {
-        background-color: ${props => props.theme.grayColor_light};
+        background-color: #1b1e2b;
         color: ${props => props.theme.basicColor};
         text-shadow: none;
+        color: #a6accd;
         .token {
-          background-color: ${props => props.theme.grayColor_light};
+          background-color: #1b1e2b;
           &.function {
-            color: #0945d9;
+            color: #0070db;
           }
           &.keyword {
-            color: #e6b402;
+            color: #ffcc00;
           }
           &.constant {
             color: #8002e6;
@@ -146,27 +164,28 @@ const PostBody = styled.div`
             color: #00b738;
           }
           &.punctuation {
-            color: #9e9e9e;
+            color: #676e95;
           }
           &.template-string {
-            color: #006d3e;
+            color: #80cbc4;
           }
           &.comment {
-            color: #b0b0b0;
+            font-style: italic;
+            color: #cccccc80;
           }
           &.attr-name {
-            color: #007804;
+            color: #80cbc4;
           }
           &.tags {
-            color: #d348ab;
+            color: #c792ea;
           }
           &.boolean {
-            color: #ff2b00;
+            color: #ffad33;
           }
           &.literal-property {
-            color: #6b0000;
+            color: #ff4000;
             &.property {
-              color: #6b0000;
+              color: #ff4000;
             }
           }
         }
@@ -202,7 +221,7 @@ const PostBody = styled.div`
 function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-  console.log(html);
+  console.log(frontmatter);
   return (
     <>
       <Wrapper>
@@ -222,6 +241,7 @@ function Template({ data }) {
           />
         </PostBody>
       </Wrapper>
+      <Comments title={frontmatter.title} path={frontmatter.slug} />
     </>
   );
 }
