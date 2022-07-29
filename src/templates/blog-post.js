@@ -146,47 +146,59 @@ const PostBody = styled.div`
         background-color: #1b1e2b;
         color: ${props => props.theme.basicColor};
         text-shadow: none;
-        color: #a6accd;
+        color: #75beff;
         .token {
           background-color: #1b1e2b;
+          color: #cccccc;
           &.function {
-            color: #0070db;
+            color: #75beff;
+          }
+          &.function-variable {
+            color: #f07178;
           }
           &.keyword {
-            color: #ffcc00;
+            color: #c792ea;
           }
           &.constant {
             color: #8002e6;
           }
           &.operator {
-            color: #5299ff;
+            color: #c792ea;
           }
-          &.string {
-            color: #00b738;
-          }
+
           &.punctuation {
-            color: #676e95;
+            color: #cccccc;
           }
           &.template-string {
             color: #80cbc4;
+          }
+          &.string {
+            color: #c3e88d;
+          }
+          &.number {
+            color: #f07178;
+          }
+          &.boolean {
+            color: #ffad33;
           }
           &.comment {
             font-style: italic;
             color: #cccccc80;
           }
-          &.attr-name {
-            color: #80cbc4;
-          }
-          &.tags {
+          .attr-name {
             color: #c792ea;
           }
-          &.boolean {
+          .tag {
+            color: #f14c4c;
+          }
+          .class-name {
             color: #ffad33;
           }
+
           &.literal-property {
-            color: #ff4000;
+            color: #ffad33;
             &.property {
-              color: #ff4000;
+              color: #ffad33;
             }
           }
         }
