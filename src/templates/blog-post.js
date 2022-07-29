@@ -2,6 +2,7 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 import Comments from "../gatsby-theme-nehalem/componets/comments";
+import Seo from "../components/seo";
 
 const Wrapper = styled.div`
   padding: 0 2rem;
@@ -224,6 +225,7 @@ function Template({ data }) {
   console.log(frontmatter);
   return (
     <>
+      <Seo title={frontmatter.title} />
       <Wrapper>
         <PostBody className="blog-post">
           <div className="inform-container">

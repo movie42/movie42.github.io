@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import Seo from "./seo";
 
 const Wrapper = styled.li`
   cursor: pointer;
@@ -68,24 +69,27 @@ const Wrapper = styled.li`
 
 const Post = ({ path, title, preview, date, tags }) => {
   return (
-    <Wrapper>
-      <Link to={path}>
-        <h3>{title}</h3>
-        <p>{preview}</p>
-        <div className="info_wrapper">
-          <div className="tags">
-            <ul>
-              {tags?.map(value => (
-                <li key={value}>
-                  <span>{value}</span>
-                </li>
-              ))}
-            </ul>
+    <>
+      <Seo title={title} />
+      <Wrapper>
+        <Link to={path}>
+          <h3>{title}</h3>
+          <p>{preview}</p>
+          <div className="info_wrapper">
+            <div className="tags">
+              <ul>
+                {tags?.map(value => (
+                  <li key={value}>
+                    <span>{value}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <span>{date}</span>
           </div>
-          <span>{date}</span>
-        </div>
-      </Link>
-    </Wrapper>
+        </Link>
+      </Wrapper>
+    </>
   );
 };
 
