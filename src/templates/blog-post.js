@@ -20,6 +20,7 @@ const PostBody = styled.div`
     font-size: 1.9rem;
     min-height: 20rem;
     margin-bottom: 5rem;
+    overflow: hidden;
     h1 {
       font-size: 13rem;
       letter-spacing: -0.3rem;
