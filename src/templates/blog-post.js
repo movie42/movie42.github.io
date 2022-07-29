@@ -240,8 +240,8 @@ function Template({ data }) {
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </PostBody>
+        <Comments title={frontmatter.title} path={frontmatter.slug} />
       </Wrapper>
-      <Comments title={frontmatter.title} path={frontmatter.slug} />
     </>
   );
 }
