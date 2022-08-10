@@ -138,12 +138,16 @@ const PostBody = styled.div`
         content: "";
       }
     }
+
     pre {
       margin: 1.2rem;
       padding: 1rem 2rem;
       background-color: #1b1e2b;
       border-radius: 1.6rem;
       code {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 1.7rem;
+        letter-spacing: -0.01rem;
         background-color: #1b1e2b;
         color: ${props => props.theme.basicColor};
         text-shadow: none;
