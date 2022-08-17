@@ -75,6 +75,9 @@ const PostBody = styled.div`
     a {
       color: ${props => props.theme.hlColor};
     }
+    p {
+      margin: 2rem 0;
+    }
 
     ul {
       li {
@@ -146,7 +149,7 @@ const PostBody = styled.div`
       border-radius: 1.6rem;
       code {
         font-family: "JetBrains Mono", monospace;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         letter-spacing: -0.01rem;
         background-color: #1b1e2b;
         color: ${props => props.theme.basicColor};
