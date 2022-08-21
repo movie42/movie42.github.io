@@ -26,7 +26,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
 
-      resumeRemark: markdownRemark(frontmatter: { slug: { eq: "/resume" } }) {
+      resumeRemark: markdownRemark(frontmatter: { slug: { eq: "/resume/" } }) {
         html
         frontmatter {
           date(formatString: "YYYY년 MMMM DD일", locale: "ko-KR")

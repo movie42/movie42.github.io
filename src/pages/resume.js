@@ -182,7 +182,7 @@ export default Resume;
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(frontmatter: { slug: { eq: "/resume" } }) {
+    markdownRemark(frontmatter: { slug: { eq: "/resume/" } }) {
       html
       frontmatter {
         title
