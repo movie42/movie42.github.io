@@ -1,11 +1,12 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import Seo from "./seo";
 
 const Wrapper = styled.li`
+  box-sizing: border-box;
   cursor: pointer;
-  height: 34rem;
+  height: 100%;
+  min-height: 40rem;
   overflow: hidden;
   margin-bottom: 1.5rem;
   padding: 2rem;
@@ -13,12 +14,19 @@ const Wrapper = styled.li`
     display: grid;
     height: inherit;
     h3 {
-      word-spacing: -0.2rem;
-      height: 14rem;
-      font-weight: 300;
+      display: -webkit-box;
+      height: 9rem;
       overflow: hidden;
+      vertical-align: top;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
       font-size: 2.8rem;
-      transition: all 0.3s ease-in-out;
+      line-height: 1.5;
+      word-spacing: -0.2rem;
+      font-weight: 300;
+      white-space: normal;
     }
     p {
       height: 15.2rem;
@@ -69,27 +77,24 @@ const Wrapper = styled.li`
 
 const Post = ({ path, title, preview, date, tags }) => {
   return (
-    <>
-      <Seo title={title} />
-      <Wrapper>
-        <Link to={path}>
-          <h3>{title}</h3>
-          <p>{preview}</p>
-          <div className="info_wrapper">
-            <div className="tags">
-              <ul>
-                {tags?.map(value => (
-                  <li key={value}>
-                    <span>{value}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <span>{date}</span>
+    <Wrapper>
+      <Link to={path}>
+        <h3>{title}</h3>
+        <p>{preview}</p>
+        <div className="info_wrapper">
+          <div className="tags">
+            <ul>
+              {tags?.map(value => (
+                <li key={value}>
+                  <span>{value}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-        </Link>
-      </Wrapper>
-    </>
+          <span>{date}</span>
+        </div>
+      </Link>
+    </Wrapper>
   );
 };
 

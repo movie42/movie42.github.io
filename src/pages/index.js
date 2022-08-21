@@ -190,7 +190,7 @@ export const pageQuery = graphql`
               title
               tags
             }
-            excerpt(format: PLAIN, pruneLength: 1000)
+            excerpt(format: PLAIN, pruneLength: 500)
             id
           }
         }
@@ -198,7 +198,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(format: PLAIN, pruneLength: 1000)
+          excerpt(format: PLAIN, pruneLength: 500)
           frontmatter {
             date(formatString: "YYYY년 MMMM DD일", locale: "ko-KR")
             slug

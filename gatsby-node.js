@@ -2,6 +2,7 @@ const path = require("path");
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
+
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
   const resumeTemplate = path.resolve(`src/pages/resume.js`);
 
@@ -45,12 +46,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const posts = result.data.postsRemark.edges;
 
-  posts.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.slug,
-      component: blogPostTemplate,
-    });
-  });
+  posts.forEach(
+    ({
+      node: {
+        frontmatter: { slug },
+      },
+    }) => {
+      createPage({
+        path: slug,
+        component: blogPostTemplate,
+      });
+    }
+  );
 
   const resume = result.data.resumeRemark;
 
