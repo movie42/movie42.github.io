@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import Seo from "./seo";
+import Seo from "./SEO";
 
 const Wrapper = styled.li`
   cursor: pointer;

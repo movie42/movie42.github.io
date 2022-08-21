@@ -1,14 +1,14 @@
-import * as React from "react";
-import { graphql } from "gatsby";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Seo from "../components/seo";
+import { graphql } from "gatsby";
+import Post from "../components/Post";
+import Seo from "../components/SEO";
 
 const Wrapper = styled.div`
   padding: 0 2rem;
   max-width: 120rem;
   margin: 0 auto;
   @media (max-width: 450px) {
-    max-width: unset;
     margin: 6rem auto 0;
   }
 `;
@@ -23,156 +23,152 @@ const Title = styled.h1`
   }
 `;
 
-const ResumeBody = styled.div`
-  padding: 2rem 0;
-  .resume-content {
-    .bold {
-      font-weight: 700;
-      color: ${props => props.theme.hlColor};
-    }
-    max-width: 102rem;
+const InfomContainer = styled.div`
+  p {
+    margin: 0;
+    padding: 0;
+  }
+`;
+
+const Contents = styled.div`
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    padding: 0;
     margin: 0 auto;
-    line-height: 1.8;
-    font-size: 1.7rem;
-    letter-spacing: -0.1rem;
-    h1 {
-      font-size: 4.2rem;
-    }
-    h2 {
-      font-size: 3.8rem;
-    }
-    h3 {
-      font-size: 3.2rem;
-    }
-    h4 {
-      font-size: 2.4rem;
-    }
-    h5 {
-      font-size: 1.8rem;
-    }
-    a {
-      color: ${props => props.theme.hlColor};
-    }
+  }
 
-    ol {
-      list-style: none;
-      counter-reset: li;
-      p {
-        display: inline-block;
-      }
-      li {
-        counter-increment: li;
-        &:before {
-          content: counter(li);
-          color: ${props => props.theme.hlColor_dark};
-          display: inline-block;
-          width: 1em;
-          margin-left: -1em;
-        }
-        ul {
-          list-style: none;
-          counter-reset: unset;
-          li {
-            counter-increment: unset;
-            &:before {
-              content: "-";
-              color: ${props => props.theme.hlColor_dark};
-              display: inline-block;
-              width: 1em;
-              margin-left: -1em;
-            }
-          }
-        }
-      }
-    }
-
-    blockquote {
-      position: relative;
-      word-break: keep-all;
-      margin: 1.2rem;
-      padding: 1rem 4rem;
-      border-radius: 0.2rem;
-      background-color: ${props => props.theme.grayColor_light};
-      &::after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 1rem;
-        height: 100%;
-        background-color: ${props => props.theme.hlColor_light};
-        content: "";
-      }
-    }
-    pre {
-      margin: 1.2rem;
-      padding: 1rem 2rem;
-      background-color: ${props => props.theme.grayColor_light};
-      code {
-        background-color: ${props => props.theme.grayColor_light};
-        color: ${props => props.theme.basicColor};
-        text-shadow: none;
-        .token {
-          background-color: ${props => props.theme.grayColor_light};
-          &.function {
-            color: #0945d9;
-          }
-          &.keyword {
-            color: #e6b402;
-          }
-          &.constant {
-            color: #8002e6;
-          }
-          &.operator {
-            color: #5299ff;
-          }
-          &.string {
-            color: #00b738;
-          }
-          &.punctuation {
-            color: #9e9e9e;
-          }
-          &.template-string {
-            color: #006d3e;
-          }
-          &.comment {
-            color: #b0b0b0;
-          }
-          &.attr-name {
-            color: #007804;
-          }
-          &.tags {
-            color: #d348ab;
-          }
-          &.boolean {
-            color: #ff2b00;
-          }
-          &.literal-property {
-            color: #6b0000;
-            &.property {
-              color: #6b0000;
-            }
-          }
-        }
-      }
+  @media (max-width: 1020px) {
+    ul {
+      grid-template-columns: unset;
     }
   }
 `;
 
-const IndexPage = ({ data, location }) => {
-  const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+const TagsContainer = styled.div`
+  width: 100%;
+  margin: 3rem 0;
+  h3 {
+    margin-bottom: 1rem;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    margin-left: -0.4rem;
+    li {
+      margin-left: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+  }
+`;
+
+const TagButton = styled.button`
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: ${props => props.theme.whiteColor};
+  background-color: ${props =>
+    props.selected ? props.theme.hlColor : props.theme.grayColor_dark};
+  font-weight: ${props => (props.selected ? 900 : 500)};
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  border: 0;
+  min-width: 10rem;
+  &:hover {
+    color: ${props => props.theme.hlColor};
+    background-color: ${props => props.theme.grayColor_light};
+  }
+`;
+
+const IndexPage = ({ data }) => {
+  const [selectItem, setSelectItem] = useState({
+    tag: "",
+    itemList: [],
+  });
+
+  const { allMarkdownRemark } = data;
+  const { edges, group } = allMarkdownRemark;
+
+  useEffect(() => {
+    if (selectItem.tag === "") {
+      setSelectItem(prev => ({ ...prev, itemList: edges }));
+    }
+  }, [selectItem.itemList, selectItem.tag, edges]);
+
+  const handleTagsList = e => {
+    const target = e.target;
+    const tagName = target.dataset.id;
+
+    if (tagName === "reset") {
+      setSelectItem(prev => ({
+        ...prev,
+        tag: "reset",
+        itemList: edges,
+      }));
+      return;
+    }
+    const [selectTagList] = group.filter(value => value.fieldValue === tagName);
+    setSelectItem(prev => ({
+      ...prev,
+      tag: selectTagList.fieldValue,
+      itemList: selectTagList.edges,
+    }));
+  };
 
   return (
     <>
-      <Seo title="이력서" />
+      <Seo title="블로그" />
       <Wrapper>
-        <Title>{frontmatter.title}</Title>
-        <ResumeBody>
-          <div
-            className="resume-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </ResumeBody>
+        <InfomContainer>
+          <Title>블로그</Title>
+          <p>개발을 하면서 겪은 소소한 것들</p>
+          <TagsContainer>
+            <h3>태그</h3>
+            <ul>
+              <li key="reset">
+                <TagButton
+                  type="button"
+                  onClick={handleTagsList}
+                  data-id="reset"
+                  selected={selectItem.tag === "reset"}
+                >
+                  초기화
+                </TagButton>
+              </li>
+              {group
+                ?.filter(value => value.fieldValue !== "이력서")
+                .map(value => (
+                  <li key={value.fieldValue}>
+                    <TagButton
+                      type="button"
+                      onClick={handleTagsList}
+                      data-id={value.fieldValue}
+                      selected={selectItem.tag === value.fieldValue}
+                    >{`${value.fieldValue} ${value.totalCount}`}</TagButton>
+                  </li>
+                ))}
+            </ul>
+          </TagsContainer>
+        </InfomContainer>
+        <Contents>
+          <ul>
+            {selectItem?.itemList
+              .filter(item => item.node.frontmatter.slug !== "/")
+              .map(post => {
+                return (
+                  <Post
+                    key={post.node.id}
+                    path={post.node.frontmatter.slug}
+                    title={post.node.frontmatter.title}
+                    date={post.node.frontmatter.date}
+                    preview={post.node.excerpt}
+                    tags={post.node.frontmatter.tags}
+                  />
+                );
+              })}
+          </ul>
+        </Contents>
       </Wrapper>
     </>
   );
@@ -181,11 +177,35 @@ const IndexPage = ({ data, location }) => {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query {
-    markdownRemark(frontmatter: { slug: { eq: "/" } }) {
-      html
-      frontmatter {
-        title
+  query Blog {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+        edges {
+          node {
+            frontmatter {
+              slug
+              date(formatString: "YYYY년 MMMM DD일", locale: "ko-KR")
+              title
+              tags
+            }
+            excerpt(format: PLAIN, pruneLength: 1000)
+            id
+          }
+        }
+      }
+      edges {
+        node {
+          id
+          excerpt(format: PLAIN, pruneLength: 1000)
+          frontmatter {
+            date(formatString: "YYYY년 MMMM DD일", locale: "ko-KR")
+            slug
+            title
+            tags
+          }
+        }
       }
     }
   }

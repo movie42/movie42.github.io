@@ -1,5 +1,5 @@
 ---
-slug: "/blog/javascript/webpack-5"
+slug: "/javascript/webpack-5"
 date: "2022-02-10"
 title: "WebPack5"
 tags: ["webpack", "module"]

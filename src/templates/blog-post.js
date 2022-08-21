@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 import Comments from "../gatsby-theme-nehalem/componets/comments";
-import Seo from "../components/seo";
+import Seo from "../components/SEO";
 
 const Wrapper = styled.div`
   padding: 0 2rem;
@@ -242,7 +242,6 @@ const PostBody = styled.div`
 function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-  console.log(frontmatter);
   return (
     <>
       <Seo title={frontmatter.title} />
@@ -253,7 +252,7 @@ function Template({ data }) {
             <div>
               <span>{frontmatter.date}</span>
               <span>
-                <Link to="/blog">목록</Link>
+                <Link to="/">목록</Link>
               </span>
             </div>
           </div>

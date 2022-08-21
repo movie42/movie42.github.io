@@ -1,5 +1,5 @@
 ---
-slug: "/blog/review/refactoring-1"
+slug: "/review/refactoring-1"
 date: "2022-08-18"
 title: "API 호출 함수 대수술"
 tags: ["리펙토링", "관심사 분리", "etc"]

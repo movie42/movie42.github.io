@@ -1,5 +1,5 @@
 ---
-slug: "/blog/javascript/javascript-module"
+slug: "/javascript/javascript-module"
 date: "2022-02-09"
 title: "Javascript Module"
 tags: ["javascript", "module"]

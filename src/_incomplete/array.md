@@ -1,5 +1,5 @@
 ---
-slug: "/blog/javascript/array-method"
+slug: "/javascript/array-method"
 date: "2022-05-17"
 title: "배열 다루기"
 tags: ["javascript", "array", "method", "react"]

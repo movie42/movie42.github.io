@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import Seo from "../components/seo";
+import Seo from "../components/SEO";
 
 const UsingSSR = ({ serverData }) => {
   return (

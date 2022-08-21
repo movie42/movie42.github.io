@@ -3,7 +3,7 @@ const path = require("path");
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
-  const resumeTemplate = path.resolve(`src/pages/index.js`);
+  const resumeTemplate = path.resolve(`src/pages/resume.js`);
 
   const result = await graphql(`
     {
@@ -26,7 +26,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
 
-      resumeRemark: markdownRemark(frontmatter: { slug: { eq: "/" } }) {
+      resumeRemark: markdownRemark(frontmatter: { slug: { eq: "/resume" } }) {
         html
         frontmatter {
           date(formatString: "YYYY년 MMMM DD일", locale: "ko-KR")

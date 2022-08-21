@@ -75,7 +75,7 @@ const Header = ({ location }) => {
     <AnimatePresence>
       <Headers>
         <ImgWrapper>
-          <Link to="/">
+          <Link to="/resume">
             <Img src={Logo} alt="logo" />
           </Link>
         </ImgWrapper>

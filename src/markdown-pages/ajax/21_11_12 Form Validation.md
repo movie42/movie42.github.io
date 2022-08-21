@@ -1,5 +1,5 @@
 ---
-slug: "/blog/form-validation"
+slug: "/form-validation"
 date: "2021-11-12"
 title: "Form Validation"
 tags: ["ajax", "javascript", "validation", "form"]

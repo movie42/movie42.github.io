@@ -1,5 +1,5 @@
 ---
-slug: "/blog/learn-about-toast-ui-editor"
+slug: "/learn-about-toast-ui-editor"
 date: "2021-11-08"
 title: "TOAST UI EDITOR를 붙이면서 배운것들"
 tags: ["toast ui editor", "how to", "etc"]

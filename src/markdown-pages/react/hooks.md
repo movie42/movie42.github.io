@@ -1,5 +1,5 @@
 ---
-slug: "/blog/react/hooks"
+slug: "/react/hooks"
 date: "2022-03-24"
 title: "여러가지 React 프로젝트를 클론 코딩하면서 배운 것"
 tags: ["javascript", "react", "hooks"]

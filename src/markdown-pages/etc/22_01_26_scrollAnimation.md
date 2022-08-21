@@ -1,5 +1,5 @@
 ---
-slug: "/blog/scroll-animation-velog"
+slug: "/scroll-animation-velog"
 date: "2022-01-26"
 title: "스크롤 애니메이션으로 velog 메뉴 흉내내기"
 tags: ["javascript", "animation"]

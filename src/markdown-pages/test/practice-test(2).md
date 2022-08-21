@@ -1,5 +1,5 @@
 ---
-slug: "/blog/test/test-practice-2-recoil"
+slug: "/test/test-practice-2-recoil"
 date: "2022-06-04"
 title: "React Testing Library 연습(2) - Recoil과 테스트"
 tags: ["test", "basic", "summary", "react", "front-end"]

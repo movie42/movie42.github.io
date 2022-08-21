@@ -1,5 +1,5 @@
 ---
-slug: "/blog/react/invalid-hook-call"
+slug: "/react/invalid-hook-call"
 date: "2022-03-22"
 title: "Styled Components와 Invalid Hook Call"
 tags: ["javascript", "react", "error"]

@@ -1,5 +1,5 @@
 ---
-slug: "/blog/http/rest-api"
+slug: "/http/rest-api"
 date: "2022-01-26"
 title: "REST API"
 tags: ["web", "http", "rest api"]

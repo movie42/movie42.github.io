@@ -1,5 +1,5 @@
 ---
-slug: "/blog/how-to-relationship-between-server-and-client"
+slug: "/how-to-relationship-between-server-and-client"
 date: "2021-09-01"
 title: "Server와 Client는 어떻게 소통할까?"
 tags: ["ajax", "javascript", "server and client"]

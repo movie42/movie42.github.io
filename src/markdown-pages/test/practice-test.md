@@ -1,5 +1,5 @@
 ---
-slug: "/blog/test/test-practice-1"
+slug: "/test/test-practice-1"
 date: "2022-05-31"
 title: "React Testing Library 연습 (1) - 테스트 익숙해지기"
 tags: ["test", "basic", "summary", "react", "front-end"]

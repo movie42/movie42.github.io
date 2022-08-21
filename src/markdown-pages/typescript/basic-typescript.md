@@ -1,5 +1,5 @@
 ---
-slug: "/blog/typescript/basic-summary"
+slug: "/typescript/basic-summary"
 date: "2022-05-20"
 title: "Typescript 기본 정리"
 tags: ["typescript", "basic", "summary"]

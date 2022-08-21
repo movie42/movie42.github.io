@@ -1,5 +1,5 @@
 ---
-slug: "/blog/react/many-form"
+slug: "/react/many-form"
 date: "2022-04-21"
 title: "react-hook-form으로 여러개의 폼 데이터 전송하기"
 tags: ["javascript", "react", "hooks", "team project"]

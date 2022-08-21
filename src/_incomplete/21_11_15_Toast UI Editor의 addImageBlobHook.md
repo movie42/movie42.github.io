@@ -1,5 +1,5 @@
 ---
-slug: "/blog/how-work-add-image-blob-hook"
+slug: "/how-work-add-image-blob-hook"
 date: "2021-11-15"
 title: "TOAST UI EDITOR의 addImageBlobHook은 어떻게 동작하는 걸까?"
 tags: ["toast ui editor", "how to", "etc"]

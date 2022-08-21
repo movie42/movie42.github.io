@@ -1,5 +1,5 @@
 ---
-slug: "/blog/javascript/web-component"
+slug: "/javascript/web-component"
 date: "2022-02-10"
 title: "Web Component"
 tags: ["javascript", "webcomponent"]

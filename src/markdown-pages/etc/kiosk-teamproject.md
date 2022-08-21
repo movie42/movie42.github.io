@@ -1,5 +1,5 @@
 ---
-slug: "/blog/etc/kiosk-team-project-1"
+slug: "/etc/kiosk-team-project-1"
 date: "2022-04-03"
 title: "누구나 키오스크 팀 프로젝트 시작"
 tags: ["team project", "etc"]

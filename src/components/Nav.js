@@ -170,20 +170,20 @@ const Nav = ({ isActive }) => {
             <Img src={Logo} alt="logo" />
           </ImgWrapper>
           <List>
-            {/* <ListItem
+            <ListItem>
+              <Item>
+                <Path activeStyle={activeStyle} to="/">
+                  블로그
+                </Path>
+              </Item>
+            </ListItem>
+            <ListItem
               onHoverStart={() => setHoverState(true)}
               onHoverEnd={() => setHoverState(false)}
             >
               <Item>
-                <Path activeStyle={activeStyle} to="/">
+                <Path activeStyle={activeStyle} to="/resume">
                   이력서
-                </Path>
-              </Item>
-            </ListItem> */}
-            <ListItem>
-              <Item>
-                <Path activeStyle={activeStyle} to="/blog">
-                  블로그
                 </Path>
               </Item>
             </ListItem>

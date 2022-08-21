@@ -1,7 +1,7 @@
 import React from "react";
-import { Disqus, CommentCount } from "gatsby-plugin-disqus";
+import { Disqus } from "gatsby-plugin-disqus";
 
-const Comments = ({ siteUrl, path, title }) => {
+const Comments = ({ path, title }) => {
   let disqusConfig = {
     identifier: path,
     title,

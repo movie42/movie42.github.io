@@ -1,5 +1,5 @@
 ---
-slug: "/blog/internet-and-web-browser"
+slug: "/internet-and-web-browser"
 date: "2021-11-21"
 title: "인터넷과 웹브라우저"
 tags: ["web", "internet", "web browser"]

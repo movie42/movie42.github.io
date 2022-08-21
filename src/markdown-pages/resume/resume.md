@@ -1,5 +1,5 @@
 ---
-slug: "/"
+slug: "/resume"
 date: "2022-03-21"
 title: "이력서"
 tags: ["이력서"]

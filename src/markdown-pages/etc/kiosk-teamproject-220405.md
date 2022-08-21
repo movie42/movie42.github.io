@@ -1,5 +1,5 @@
 ---
-slug: "/blog/etc/kiosk-team-project-2"
+slug: "/etc/kiosk-team-project-2"
 date: "2022-04-05"
 title: "프로젝트를 하면서 겪은 문제, Typescript와 StyledComponent, Event, Component 설계하기"
 tags: ["team project", "etc"]

@@ -1,5 +1,5 @@
 ---
-slug: "/blog/react/custom-hook-useFetch"
+slug: "/react/custom-hook-useFetch"
 date: "2022-03-31"
 title: "useFetch 만들기"
 tags: ["javascript", "react", "custom hook", "useFetch"]

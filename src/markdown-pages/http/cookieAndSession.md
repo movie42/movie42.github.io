@@ -1,5 +1,5 @@
 ---
-slug: "/blog/http/cooki-and-session"
+slug: "/http/cooki-and-session"
 date: "2022-01-02"
 title: "쿠키와 세션"
 tags: ["web", "cookie", "session"]
