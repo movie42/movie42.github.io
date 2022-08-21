@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import Post from "../components/Post";
-import Seo from "./seo";
+import Seo from "../components/seo";
 
 const Wrapper = styled.div`
   padding: 0 2rem;
