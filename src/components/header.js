@@ -56,8 +56,7 @@ const Img = styled(motion.img)`
   mix-blend-mode: screen;
   margin: 50% 0 0 50%;
   transform: translate(-50%, -50%);
-  width: 8rem;
-  height: 8rem;
+  width: 10rem;
 `;
 
 const Header = ({ location }) => {

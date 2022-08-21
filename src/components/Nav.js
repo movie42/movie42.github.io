@@ -92,7 +92,6 @@ const Img = styled.img`
   margin: 50% 0 0 50%;
   transform: translate(-50%, -50%);
   width: 16rem;
-  height: 16rem;
 `;
 
 const activeStyle = {
