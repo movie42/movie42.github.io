@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 import Comments from "../gatsby-theme-nehalem/componets/comments";
-import Seo from "../components/SEO";
+import Seo from "../pages/seo";
 
 const Wrapper = styled.div`
   padding: 0 2rem;
@@ -56,6 +56,13 @@ const PostBody = styled.div`
     line-height: 1.8;
     font-size: 1.9rem;
     letter-spacing: -0.1rem;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin: 2rem 0;
+    }
     h1 {
       color: #0070ff;
       font-size: 4.5rem;
@@ -76,7 +83,7 @@ const PostBody = styled.div`
       color: ${props => props.theme.hlColor};
     }
     p {
-      margin: 2rem 0;
+      margin: 3rem 0;
     }
 
     ul {
@@ -143,13 +150,13 @@ const PostBody = styled.div`
     }
 
     pre {
-      margin: 1.2rem;
+      margin: 4rem 0;
       padding: 1rem 2rem;
       background-color: #1b1e2b;
-      border-radius: 1.6rem;
+      border-radius: 0.8rem;
       code {
         font-family: "JetBrains Mono", monospace;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         letter-spacing: -0.01rem;
         background-color: #1b1e2b;
         color: ${props => props.theme.basicColor};

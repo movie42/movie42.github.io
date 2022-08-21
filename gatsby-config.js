@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://movie42.github.io`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
@@ -31,9 +32,6 @@ module.exports = {
       options: {
         shortname: `movie42`,
       },
-    },
-    {
-      resolve: `gatsby-plugin-styled-components`,
     },
     {
       resolve: `gatsby-plugin-typography`,

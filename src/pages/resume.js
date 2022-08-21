@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
-import Seo from "../components/SEO";
+import Seo from "./seo";
 
 const Wrapper = styled.div`
   padding: 0 2rem;
