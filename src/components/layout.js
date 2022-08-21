@@ -1,8 +1,6 @@
 import * as React from "react";
 import Header from "./Header";
-import styled, { ThemeProvider } from "styled-components";
-import GlobalStyle from "./GlobalStyle";
-import { theme } from "../theme/theme.js";
+import styled from "styled-components";
 
 const Main = styled.main`
   min-height: 80vh;
@@ -11,11 +9,8 @@ const Main = styled.main`
 const Layout = ({ children, location }) => {
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Header location={location} />
-        <Main>{children}</Main>
-      </ThemeProvider>
+      <Header location={location} />
+      <Main>{children}</Main>
     </>
   );
 };

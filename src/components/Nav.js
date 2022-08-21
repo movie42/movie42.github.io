@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import Logo from "../images/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 import useMousePosition from "../hooks/useMousePosition";
 
@@ -166,7 +165,7 @@ const Nav = ({ isActive }) => {
               y,
             }}
           >
-            <Img src={Logo} alt="logo" />
+            <Img src="/logo.png" alt="logo" />
           </ImgWrapper>
           <List>
             <ListItem>

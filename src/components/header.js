@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Nav from "./Nav";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import Logo from "../images/logo.png";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Headers = styled.header`
@@ -75,7 +74,7 @@ const Header = ({ location }) => {
       <Headers>
         <ImgWrapper>
           <Link to="/resume">
-            <Img src={Logo} alt="logo" />
+            <Img src="/logo.png" alt="logo" />
           </Link>
         </ImgWrapper>
         <button className="navBtn" onClick={handleMenu}>
