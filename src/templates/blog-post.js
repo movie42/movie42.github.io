@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 import Comments from "../gatsby-theme-nehalem/componets/comments";
 import Seo from "../components/seo";
-import { BlogPostLayout } from "../components/layout";
+import BlogPostLayout from "../components/layouts/BlogPostLayout";
 
 const Wrapper = styled.div`
   padding: 0 2rem;

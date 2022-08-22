@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import Post from "../components/Post";
-import Seo from "../components/Seo";
-import { BlogListLayout } from "../components/Layout";
+import Seo from "../components/seo";
+import BlogListLayout from "../components/layouts/BlogListLayout";
 
 const Wrapper = styled.div`
   padding: 0 2rem;

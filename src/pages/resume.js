@@ -1,8 +1,8 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
-import Seo from "../components/Seo";
-import { ResumeLayout } from "../components/Layout";
+import Seo from "../components/seo";
+import ResumeLayout from "../components/layouts/ResumeLayout";
 
 const Wrapper = styled.div`
   padding: 0 2rem;
