@@ -10,8 +10,8 @@ jobs:
     environment: production
     steps:
       - uses: actions/checkout@v3
+        run: npm install --legacy-peer-deps
       - name: Gatsby Publish 🚀
         uses: enriikke/gatsby-gh-pages-action@v2.2.0
-        run: npm install --legacy-peer-deps
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
