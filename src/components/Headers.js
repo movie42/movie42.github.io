@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Nav from "./Nav";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import { AnimatePresence, motion } from "framer-motion";
-import { StaticImage } from "gatsby-plugin-image";
+import Logo from "../images/logo.png";
 
 const Headers = styled.header`
   display: flex;
@@ -30,6 +30,7 @@ const Headers = styled.header`
 `;
 
 const ImgWrapper = styled(motion.div)`
+  position: relative;
   cursor: pointer;
   width: 6rem;
   height: 6rem;
@@ -41,49 +42,42 @@ const ImgWrapper = styled(motion.div)`
     background-color: ${props => props.theme.whiteColor};
     transition: all 0.3s ease-in-out;
   }
-  .gatsby-image-wrapper {
-    width: 6rem;
-    height: 6rem;
-    overflow: hidden;
-    border-radius: 100%;
-  }
-  .gatsby-image-wrapper img {
-    filter: grayscale(100%);
-    mix-blend-mode: screen;
-    width: 8rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    &:hover {
-      filter: unset;
-      mix-blend-mode: unset;
-    }
+`;
+
+const Img = styled.img`
+  position: absolute;
+  width: 6rem;
+  filter: grayscale(100%);
+  mix-blend-mode: screen;
+  width: 8rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &:hover {
+    filter: unset;
+    mix-blend-mode: unset;
   }
 `;
 
-const Header = ({ location }) => {
+const Header = () => {
   const [menu, setMenu] = useState(false);
 
   const handleMenu = () => {
     setMenu(menu => !menu);
   };
 
-  useEffect(() => {
-    setMenu(false);
-  }, [location.pathname]);
-
   return (
     <AnimatePresence>
       <Headers>
         <ImgWrapper>
           <Link to="/resume">
-            <StaticImage src="../images/logo.png" alt="logo" />
+            <Img src={Logo} alt="logo" />
           </Link>
         </ImgWrapper>
         <button className="navBtn" onClick={handleMenu}>
           메뉴
         </button>
-        <Nav location={location} isActive={menu} />
+        <Nav isActive={menu} />
       </Headers>
     </AnimatePresence>
   );

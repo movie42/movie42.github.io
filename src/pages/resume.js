@@ -1,7 +1,8 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
-import Seo from "../components/seo";
+import Seo from "../components/Seo";
+import { ResumeLayout } from "../components/Layout";
 
 const Wrapper = styled.div`
   padding: 0 2rem;
@@ -163,7 +164,7 @@ const Resume = ({ data, location }) => {
   const { frontmatter, html } = markdownRemark;
 
   return (
-    <>
+    <ResumeLayout>
       <Seo title="이력서" />
       <Wrapper>
         <Title>{frontmatter.title}</Title>
@@ -174,7 +175,7 @@ const Resume = ({ data, location }) => {
           />
         </ResumeBody>
       </Wrapper>
-    </>
+    </ResumeLayout>
   );
 };
 

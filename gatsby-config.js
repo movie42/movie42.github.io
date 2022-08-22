@@ -3,10 +3,13 @@ module.exports = {
     title: `고현수의 블로그`,
     description: `개발하면서 겪은 것을 이야기로 풀어보는 블로그`,
     author: `고현수`,
-    siteUrl: `https://movie42.github.io`,
+    url: `https://movie42.github.io`,
+    social: {
+      email: "movie3342@gmail.com",
+      githubUserName: "movie42",
+    },
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
@@ -93,5 +96,6 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 };

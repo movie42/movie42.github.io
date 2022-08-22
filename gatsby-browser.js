@@ -1,21 +1,9 @@
-import * as React from "react";
-import Layout from "./src/components/Layout";
+/**
+ * Implement Gatsby's Browser APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/browser-apis/
+ */
+
+// You can delete this file if you're not using it
+
 import "prismjs/themes/prism.css";
-import GlobalStyle from "./src/components/GlobalStyle";
-import { ThemeProvider } from "styled-components";
-import { theme } from "./src/theme/theme";
-
-export function wrapPageElement({ element, props }) {
-  return (
-    <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Layout {...props}>{element}</Layout>
-      </ThemeProvider>
-    </>
-  );
-}
-
-export function wrapRootElement({ element }) {
-  return <>{element}</>;
-}

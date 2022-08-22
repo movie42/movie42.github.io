@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 import Comments from "../gatsby-theme-nehalem/componets/comments";
 import Seo from "../components/seo";
+import { BlogPostLayout } from "../components/layout";
 
 const Wrapper = styled.div`
   padding: 0 2rem;
@@ -250,7 +251,7 @@ function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
-    <>
+    <BlogPostLayout>
       <Seo title={frontmatter.title} />
       <Wrapper>
         <PostBody className="blog-post">
@@ -270,7 +271,7 @@ function Template({ data }) {
         </PostBody>
         <Comments title={frontmatter.title} path={frontmatter.slug} />
       </Wrapper>
-    </>
+    </BlogPostLayout>
   );
 }
 

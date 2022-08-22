@@ -3,12 +3,8 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 import useMousePosition from "../hooks/useMousePosition";
-import { StaticImage } from "gatsby-plugin-image";
 
 const Wrapper = styled(motion.nav)`
-  @media (max-width: 450px) {
-    padding: 0;
-  }
   display: none;
   overflow-x: hidden;
   overflow-y: auto;
@@ -23,6 +19,9 @@ const Wrapper = styled(motion.nav)`
   left: 0;
   right: 0;
   bottom: 0;
+  @media (max-width: 450px) {
+    padding: 0;
+  }
 `;
 
 const List = styled.ul`
@@ -34,7 +33,7 @@ const ListItem = styled(motion.li)`
   position: relative;
   overflow: hidden;
   width: 40rem;
-  height: 17rem;
+  height: 18rem;
 `;
 
 const Item = styled(motion.div).attrs(() => {
@@ -84,21 +83,17 @@ const ImgWrapper = styled(motion.div)`
   border-radius: 6rem;
   overflow: hidden;
   background-color: ${props => props.theme.hlColor_dark};
-  .gatsby-image-wrapper {
-    width: 16rem;
-    width: 16rem;
-    overflow: hidden;
-  }
-  .gatsby-image-wrapper img {
-    filter: grayscale(100%);
-    width: 16rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-55%, -50%);
-    &:hover {
-      filter: unset;
-      mix-blend-mode: unset;
-    }
+`;
+
+const Img = styled.img`
+  filter: grayscale(100%);
+  width: 16rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -50%);
+  &:hover {
+    filter: unset;
+    mix-blend-mode: unset;
   }
 `;
 
@@ -174,7 +169,7 @@ const Nav = ({ isActive }) => {
               y,
             }}
           >
-            <StaticImage src="../images/logo.png" alt="logo" />
+            <Img src="../images/logo.png" alt="logo" />
           </ImgWrapper>
           <List>
             <ListItem>

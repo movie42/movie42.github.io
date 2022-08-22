@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import Post from "../components/Post";
-import Seo from "../components/seo";
+import Seo from "../components/Seo";
+import { BlogListLayout } from "../components/Layout";
 
 const Wrapper = styled.div`
   padding: 0 2rem;
@@ -81,7 +82,7 @@ const TagButton = styled.button`
   }
 `;
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, ...props }) => {
   const [selectItem, setSelectItem] = useState({
     tag: "",
     itemList: [],
@@ -117,7 +118,7 @@ const IndexPage = ({ data }) => {
   };
 
   return (
-    <>
+    <BlogListLayout>
       <Seo title="블로그" />
       <Wrapper>
         <InfomContainer>
@@ -170,7 +171,7 @@ const IndexPage = ({ data }) => {
           </ul>
         </Contents>
       </Wrapper>
-    </>
+    </BlogListLayout>
   );
 };
 
