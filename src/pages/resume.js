@@ -19,33 +19,71 @@ const Title = styled.h1`
   font-weight: 900;
   margin: 0;
   padding: 0;
-  @media (max-width: 450px) {
+  word-break: keep-all;
+  @media (max-width: 780px) {
     font-size: 10rem;
+  }
+  @media (max-width: 450px) {
+    font-size: 8rem;
   }
 `;
 
 const ResumeBody = styled.div`
-  padding: 2rem 0;
-  .resume-content {
-    .bold {
-      font-weight: 700;
-      color: ${props => props.theme.hlColor};
+  .intro {
+    margin: 1rem 0;
+  }
+  .icon-small {
+    svg {
+      width: 1.8rem;
     }
+  }
+
+  .resume-content {
     max-width: 102rem;
     margin: 0 auto;
     line-height: 1.8;
     font-size: 1.7rem;
     letter-spacing: -0.1rem;
+
+    .contact-me {
+      width: 100%;
+      padding: 2rem;
+      border-radius: 1rem;
+      background-color: ${props => props.theme.grayColor_light};
+
+      p {
+        display: flex;
+        align-items: center;
+        span {
+          margin-right: 0.5rem;
+        }
+        a {
+          letter-spacing: normal;
+          font-family: Arial, Helvetica, sans-serif;
+          color: #000000;
+          padding-bottom: 0.4rem;
+          &:hover {
+            font-weight: bold;
+            color: ${props => props.theme.hlColor_dark};
+          }
+        }
+      }
+    }
+
     h1 {
+      margin: 3rem 0;
       font-size: 4.2rem;
     }
     h2 {
+      margin: 2rem 0;
       font-size: 3.8rem;
     }
     h3 {
+      margin: 2rem 0;
       font-size: 3.2rem;
     }
     h4 {
+      margin: 1.7rem 0;
       font-size: 2.4rem;
     }
     h5 {
@@ -167,7 +205,8 @@ const Resume = ({ data, location }) => {
     <ResumeLayout>
       <Seo title="이력서" />
       <Wrapper>
-        <Title>{frontmatter.title}</Title>
+        <Title>이력서</Title>
+
         <ResumeBody>
           <div
             className="resume-content"
