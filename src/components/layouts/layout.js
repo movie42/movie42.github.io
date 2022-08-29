@@ -3,6 +3,7 @@ import Header from "../header";
 import { ThemeProvider } from "styled-components";
 import Globalstyle from "../GlobalStyle";
 import { theme } from "../../theme/theme";
+import "./font.css";
 
 const Layout = ({ children }) => {
   return (
