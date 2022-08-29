@@ -7,106 +7,346 @@ tags: ["이력서"]
 
 # 프론트 앤드 개발자 고현수입니다.
 
-안녕하세요. <span class="bold">프론트 앤드 개발자 고현수입니다.</span> 함께 일하는 동료와 함께 좋은 서비스를 만들기 위해 최선을 다하겠습니다.
+<p class="intro">
+안녕하세요. 동료와 함께 좋은 서비스를 만들기 위해 최선을 다하겠습니다.
+</p>
 
-- 디자인을 했던 경험을 바탕으로 사용자가 읽기 편한 화면을 만드려고 노력합니다.
-- 좋은 코드를 작성하기 위해서 이미 완성된 코드를 계속 돌아보고 개선하려고 노력합니다.
-- 최신 기술 동향을 항상 살펴보고 사용해보면서 웹 기술 트랜드를 이해하고 저의 프로젝트에 적용해 보려고 노력합니다.
-- 함께 일하는 것을 좋아합니다. 여러 사람들과 소통하고 문제를 개선해 나가는 것을 좋아합니다.
+- 저는 좋은 코드를 작성하기 위해 이미 완성된 코드를 돌아보고 개선하려고 노력합니다. 바닐라 자바스크립트 [프로젝트를 3번 리펙토링](https://github.com/movie42/ychung) 해보고 그 프로젝트를 [리액트와 타입스크립트를 사용해서 마이그레이션 한 경험](https://github.com/movie42/ychung-frontend)이 있습니다.
+- 함께 일하고 대화를 통해 문제를 해결하는 것을 좋아합니다. UX/UI 디자이너로 7개월간 재직하면서 특수교육청 담당자와 많은 대화를 통해 사용자의 불편함을 개선한 경험이 있습니다. 과거 영화를 하면서 한 영화를 만들기 위해 많은 사람들과 대화를 통해 문제를 해결한 경험이 있습니다.
+- 배운 것을 생각해보고 다른 사람들과 [공유하고 있습니다](https://movie42.github.io/blog). 공유를 통해 지식은 개선되고 발전된다고 믿고 있습니다.
 
 ## Contact Me
 
-> Email : movie3342@gmail.com  
-> Github : https://github.com/movie42  
-> blog : https://movie42.github.io
+<div class="contact-me">
+<p>
+<span>✉️</span>
+<a target="_blank" href="mailto:movie3342@gmail.com">movie3342@gmail.com</a>
+</p>
+<p>
+<span class="icon-small">
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+</span>
+<a href="https://github.com/movie42" target="_blank">
+https://github.com/movie42
+</a>
+</p>
+<p>
+<span class="icon-small">✍🏽<span>
+<a href="https://movie42.github.io">
+https://movie42.github.io
+</a>
+</p>
+</div>
+
+<section class="project">
 
 ## 개인 프로젝트
 
+<div class="project-container">
+
 #### 누구나 키오스크
 
-1.  개요
+<div class="project-section">
 
-    - [깃허브 저장소](https://github.com/movie42/kiosk-frontend)
-    - [서비스 바로가기](https://everyonekiosk.com)
-    - 목적 : 누구나 가볍게 사용할 수 있는 키오스크 어플리케이션
+  <h5>개요</h5>
 
-2.  역할
+점주가 별다른 키오스크 기계 없이 웹으로 가게 상품, 주문 상태 등을 관리할 수 있는 키오스크 어플리케이션
 
-    - Front-end
-    - 기획, 디자인
+  <div>
+    <span>
+    <span class="icon-small"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>
+    <a href="https://github.com/movie42/kiosk-frontend" target="_blank">
+    깃허브 저장소
+    </a>
+    </span>
+    <span>
+    <span class="icon-small">🌐<span>
+    <a href="https://everyonekiosk.com" target="_blank">
+    서비스 구경하기
+    </a>
+    </span>
+  </div>
 
-3.  스택
+</div>
 
-    - **프론트 앤드**
+<div class="project-section">
 
-      <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white" />
-      <img src="https://img.shields.io/badge/React Query-FF4154?style=for-the-badge&logo=React Query&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/Recoil-1414A0?style=for-the-badge&logo=Recoil&logoColor=white" />
-      <img src="https://img.shields.io/badge/FramerMotion-0055FF?style=for-the-badge&logo=Framer&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/StyledComponents-DB7093?style=for-the-badge&logo=Framer&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/Code gen-FAFAFA?style=for-the-badge&logo=Code gen&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=GraphQL&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/ReactHookForm-DB7093?style=for-the-badge&logo=ReactHookForm&logoColor=white" />
+<h5>역할</h5>
 
-    - **백앤드**
+프론트앤드, 기획, 디자인
 
-      <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=NestJS&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/jwt-3178C6?style=for-the-badge&logo=jwt&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=GraphQL&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/Node.js 16.x-339933?style=for-the-badge&logo=Node.js&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/typeorm-262627?style=for-the-badge&logo=typeorm&logoColor=white" />
+</div>
+<div class="project-section">
+<h5>스택</h5>
 
-    - **인프라**
+<div class="project-stack">
+  <div class="project-stack-title">
+    <p>프론트 앤드</p>
+  </div>
+  <span>
+    <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white" />
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white" />
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/React Query-FF4154?style=for-the-badge&logo=React Query&logoColor=white" />
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/Recoil-1414A0?style=for-the-badge&logo=Recoil&logoColor=white" />
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/FramerMotion-0055FF?style=for-the-badge&logo=Framer&logoColor=white" />
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/StyledComponents-DB7093?style=for-the-badge&logo=Framer&logoColor=white" />
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/Code gen-FAFAFA?style=for-the-badge&logo=Code gen&logoColor=white" />
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=GraphQL&logoColor=white" />
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/ReactHookForm-DB7093?style=for-the-badge&logo=ReactHookForm&logoColor=white" />
+  </span>
+</div>
 
-      <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/Amazon EC2-FF9900?style=for-the-badge&logo=Amazon EC2&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/Amazon S3-569A31?style=for-the-badge&logo=Amazon S3&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/Ubuntu 20.x-E95420?style=for-the-badge&logo=Ubuntu&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=NGINX&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/GitHub Actions-2088FF?style=for-the-badge&logo=GitHub Actions&logoColor=white">
+<div class="project-stack">  
+  <div class="project-stack-title">
+      <p>백앤드</p>
+  </div>
+  <span>
+    <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=NestJS&logoColor=white" />
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white" />
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/jwt-3178C6?style=for-the-badge&logo=jwt&logoColor=white" />
+  </span>
+  <span>  
+    <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white" />
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=GraphQL&logoColor=white" />
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/Node.js 16.x-339933?style=for-the-badge&logo=Node.js&logoColor=white" />
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/typeorm-262627?style=for-the-badge&logo=typeorm&logoColor=white" />
+  </span>
+</div>
 
-4.  프로젝트를 통해 배운 것들
-    - React와 Typescript를 사용해 어플리케이션 개발하는 방법
-    - ReactQuery와 Recoil을 사용한 상태 관리
-    - Github를 통한 버전 관리 및 CI/CD
-    - AWS 자동 배포
-    - S3를 사용한 이미지 서버 구축
-    - 팀원과 함께 소통하여 프로젝트를 만들어가는 방법
+<div class="project-stack">
+  <div class="project-stack-title">
+  <p>인프라</p>
+  </div>
+    <span>
+      <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white">
+    </span>
+    <span>
+      <img src="https://img.shields.io/badge/Amazon EC2-FF9900?style=for-the-badge&logo=Amazon EC2&logoColor=white" />
+    </span>
+    <span>
+      <img src="https://img.shields.io/badge/Amazon S3-569A31?style=for-the-badge&logo=Amazon S3&logoColor=white" />
+    </span>
+    <span>
+      <img src="https://img.shields.io/badge/Ubuntu 20.x-E95420?style=for-the-badge&logo=Ubuntu&logoColor=white" />
+    </span>
+    <span>
+      <img src="https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=NGINX&logoColor=white" />
+    </span>
+    <span>
+      <img src="https://img.shields.io/badge/GitHub Actions-2088FF?style=for-the-badge&logo=GitHub Actions&logoColor=white">
+    </span>
+  </div>
+</div>
+
+  <div class="project-section">
+  <h5>프로젝트를 통해 배운 것들</h5>
+  
+  <ul>
+    <li>협업을 조금 더 원활하게 하기 위해 React, Typescript를 사용하였고 gitflow를 적용해 branch 충돌을 최소화하였습니다.</li>
+    <li>코드 리뷰를 진행하여 함께 코드를 살펴보고 코드를 개선했습니다.</li>
+    <li>GitAction을 통해 CI/CD를 구축하여 AWS EC2에 배포 하는 시간을 단축 하였습니다.</li>
+    <li>React Query와 Recoil을 사용해 주문 상태 변경이 곧바로 변경되도록 하였습니다.</li>
+  </ul>
+
+  </div>
+</div>
+
+<div class="project-container">
 
 #### 양청 웹 어플리케이션
 
-1.  개요
+<div class="project-section">
+  
+  <h5>개요</h5>
 
-    - [깃허브 저장소](https://github.com/movie42/ychung)
-    - [서비스 바로가기](https://y-chung.com)
-    - 목적 : 양정교회 청년부 봉사자들을 위한 백오피스 어플리케이션
+양정교회 청년부 봉사자들을 위해서 백오피스 기능을 담고 있는 웹 어플리케이션.
 
-2.  역할
+  <div>
+    <span>
+    <span class="icon-small"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>
+    <a href="https://github.com/movie42/ychung-frontend" target="_blank">
+    깃허브 저장소
+    </a>
+    </span>
+    <span>
+    <span class="icon-small">🌐<span>
+    <a href="https://y-chung.com" target="_blank">
+    서비스 구경하기
+    </a>
+    </span>
+  </div>
 
-    - Front-end, Back-end
-    - 기획, 디자인
+</div>
 
-3.  스택
+<div class="project-section">
 
-    - **프론트앤드**
+<h5>역할</h5>
 
-      <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/React Query-FF4154?style=for-the-badge&logo=React Query&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/Recoil-1414A0?style=for-the-badge&logo=Recoil&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/FramerMotion-0055FF?style=for-the-badge&logo=Framer&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/StyledComponents-DB7093?style=for-the-badge&logo=Framer&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/ReactHookForm-DB7093?style=for-the-badge&logo=ReactHookForm&logoColor=white" />
+프론트앤드, 백앤드, 기획, 디자인
 
-    - **백앤드**
+</div>
 
-      <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=Express" />&nbsp;<img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=black" />&nbsp;<img src="https://img.shields.io/badge/jwt-3178C6?style=for-the-badge&logo=jwt&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/Node.js 16.x-339933?style=for-the-badge&logo=Node.js&logoColor=white" />
+<div class="project-section">
 
-    - **인프라**
+<h5>스택</h5>
 
-      <img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=Github&logoColor=white">&nbsp;
-      <img src="https://img.shields.io/badge/heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" />&nbsp;<img src="https://img.shields.io/badge/GitHub Actions-2088FF?style=for-the-badge&logo=GitHub Actions&logoColor=white">
+<div class="project-stack">
+  <div class="project-stack-title">
+    <p>프론트앤드</p>
+  </div>
+    <span>
+      <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white" />
+    </span>
+    <span>
+      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white" />
+    </span>
+    <span>
+      <img src="https://img.shields.io/badge/React Query-FF4154?style=for-the-badge&logo=React Query&logoColor=white" />
+    </span>
+    <span>
+      <img src="https://img.shields.io/badge/Recoil-1414A0?style=for-the-badge&logo=Recoil&logoColor=white" />
+    </span>
+    <span>
+      <img src="https://img.shields.io/badge/FramerMotion-0055FF?style=for-the-badge&logo=Framer&logoColor=white" />
+    </span>
+    <span>
+      <img src="https://img.shields.io/badge/StyledComponents-DB7093?style=for-the-badge&logo=Framer&logoColor=white" />
+    </span>
+    <span>
+      <img src="https://img.shields.io/badge/ReactHookForm-DB7093?style=for-the-badge&logo=ReactHookForm&logoColor=white" />
+    </span>
+</div>
+<div class="project-stack">
+  <div class="project-stack-title">
+    <p>백앤드</p>
+    <span>
+      <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=Express" />
+    </span>
+    <span>
+      <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=black" />
+    </span>
+    <span>
+      <img src="https://img.shields.io/badge/jwt-3178C6?style=for-the-badge&logo=jwt&logoColor=white" />
+    </span>
+    <span>
+      <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white" />
+    </span>
+    <span>
+      <img src="https://img.shields.io/badge/Node.js 16.x-339933?style=for-the-badge&logo=Node.js&logoColor=white" />
+    </span>
+  </div>
+</div>
+<div class="project-stack">
+  <div class="project-stack-title">
+    <p>인프라</p>
+     <span>
+      <img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=Github&logoColor=white">
+      </span>
+      <span>
+        <img src="https://img.shields.io/badge/heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" />
+      </span>
+      <span>
+        <img src="https://img.shields.io/badge/GitHub Actions-2088FF?style=for-the-badge&logo=GitHub Actions&logoColor=white">
+      </span>
+  </div>
+</div>
+</div>
 
-4.  프로젝트를 통해 배운 것들
-    - React와 Typescript를 사용해 어플리케이션 개발하는 방법
-    - ReactQuery와 Recoil을 사용한 상태 관리
-    - Webpack5, Babel, ExpressJS을 이용한 웹 개발 환경 세팅하기
-    - REST API 만들기
-    - Github를 통한 버전 관리 및 CI/CD
+<div class="project-section">
+<h5>프로젝트를 통해 배운 것들</h5>
+<ul>
+  <li>MVC 모델에서 모델과 뷰가 계속 뒤섞이는 문제를 해결하기 위해서 React를 사용하여 어플리케이션을 마이그레이션하였습니다.
+  </li>
+  <li>서버 상태를 조금 쉽게 관리하기 위해 React Query를 사용하였습니다.
+  </li>
+  <li>컴포넌트를 설계할 때, 관심사의 분리를 적용해보았습니다. 대표적으로 뷰 컴포넌트 안에 API 호출 코드를 커스텀 훅으로 분리했습니다.</li>
+  <li>GitAction을 사용하여 CI/CD를 구축하여 배포 시간을 단축하였습니다.
+  </li>
+  <li>사용자 UX를 개선하기 위해 스켈레톤과 스낵바, 경고 모달창 등을 적용하였습니다.
+  </li>
+  <li>모바일 퍼스트로 개발하였습니다. UI를 APPLike하게 구성하였습니다.
+  </li>
+  <li>사용자와 지속적인 소통을 통해 어플리케이션을 지속적으로 업데이트하고 있습니다.
+  </li>
+</ul>
 
-### 관련 업무 경험
+</div>
 
-- **좋은 정보 기술**
+</div>
 
-  직무 : UX/UI 디자이너  
-  기간 : 2019-12 ~ 2020-07(약 7개월)  
-  한 일
+</section>
 
-  - 웹 기획 및 웹 퍼블리싱
-  - 공공시설 즉시 감면 서비스 유지보수
-  - 전라북도 특수교육지원센터 홈페이지 기획 및 유지보수
-  - 전라북도 교육청 홈페이지 유지보수
+<section class="project">
 
-### 학력
+## 관련 업무 경험
 
-> 전북대학교 화학과 졸업(2018년 8월)
+<div class="project-container">
+
+#### 좋은 정보 기술
+
+  <div class="project-section">
+    <h5>직무</h5>
+    <p>
+    UX/UI 디자이너, 기획, 퍼블리싱
+    </p>
+    <p class="period">
+    2019.12-2020.07(약7개월)
+    </p>
+  </div>
+
+  <div class="project-section">
+
+  <h5>주요성과</h5>
+
+  <div class="project-list">
+    <p><strong>전라북도 특수교육지원청 홈페이지 퍼블리싱 및 UX 개선</strong></p>
+    <p class="period">2020.03-2020.04</p>
+    <ul>
+      <li>전라북도 특수교육지원청 홈페이지 UX를 개선.</li>
+      <li>개선 이후 이용자의 민원 전화를 40% 감소.</li>
+    </ul>
+    </div>
+    <div>
+      <p><strong>전라북도 교육청, 공공감면 시스템 등 홈페이지 유지보수</strong></p>
+      <p class="period">2019.12-2020.07</p>
+      <ul>
+        <li>전라북도 교육청, 공공감면 시스템 홈페이지의 유지 보수 업무 담당.</li>
+      </ul>
+  </div>
+  </div>
+</div>
+</section>
+
+<section>
+
+## 학력
+
+전북대학교 화학과 졸업(2018년 8월)
+
+</section>

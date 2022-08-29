@@ -19,71 +19,121 @@ const Title = styled.h1`
   font-weight: 900;
   margin: 0;
   padding: 0;
-  @media (max-width: 450px) {
+  word-break: keep-all;
+  @media (max-width: 780px) {
     font-size: 10rem;
+  }
+  @media (max-width: 450px) {
+    font-size: 8rem;
   }
 `;
 
 const ResumeBody = styled.div`
-  padding: 2rem 0;
-  .resume-content {
-    .bold {
-      font-weight: 700;
-      color: ${props => props.theme.hlColor};
+  margin-bottom: 20rem;
+  .intro {
+    margin: 1rem 0;
+  }
+  .icon-small {
+    svg {
+      width: 1.8rem;
     }
-    max-width: 102rem;
+  }
+
+  .project {
+    .project-container {
+      box-sizing: border-box;
+      padding: 1rem 2rem;
+      border-top: 1px solid ${props => props.theme.grayColor};
+
+      .project-section {
+        padding: 1rem 1rem;
+        .period {
+          word-spacing: 120%;
+          font-weight: 100;
+        }
+        .project-list {
+          margin-top: 1rem;
+          ul {
+            li {
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+      ul {
+        margin: 1rem 0;
+      }
+      .project-stack {
+        margin: 0 0.5rem;
+        .project-stack-title {
+          margin: 0.5rem 0;
+        }
+        span {
+          img {
+            border-radius: 0.4rem;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .resume-content {
+    max-width: 120rem;
     margin: 0 auto;
     line-height: 1.8;
     font-size: 1.7rem;
     letter-spacing: -0.1rem;
+
+    .contact-me {
+      width: 100%;
+      padding: 2rem;
+      border-radius: 1rem;
+      background-color: ${props => props.theme.grayColor_light};
+
+      p {
+        display: flex;
+        align-items: center;
+        span {
+          margin-right: 0.5rem;
+        }
+        a {
+          letter-spacing: normal;
+          font-family: Arial, Helvetica, sans-serif;
+          color: #000000;
+          padding-bottom: 0.4rem;
+          &:hover {
+            font-weight: bold;
+            color: ${props => props.theme.hlColor_dark};
+          }
+        }
+      }
+    }
+
     h1 {
+      margin: 3rem 0;
       font-size: 4.2rem;
     }
     h2 {
+      margin: 2rem 0;
       font-size: 3.8rem;
     }
     h3 {
+      margin: 2rem 0;
       font-size: 3.2rem;
     }
     h4 {
       font-size: 2.4rem;
+      margin: 1.8rem 0;
     }
     h5 {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
     }
     a {
       color: ${props => props.theme.hlColor};
-    }
-
-    ol {
-      list-style: none;
-      counter-reset: li;
-      p {
-        display: inline-block;
-      }
-      li {
-        counter-increment: li;
-        &:before {
-          content: counter(li);
-          color: ${props => props.theme.hlColor_dark};
-          display: inline-block;
-          width: 1em;
-          margin-left: -1em;
-        }
-        ul {
-          list-style: none;
-          counter-reset: unset;
-          li {
-            counter-increment: unset;
-            &:before {
-              content: "-";
-              color: ${props => props.theme.hlColor_dark};
-              display: inline-block;
-              width: 1em;
-              margin-left: -1em;
-            }
-          }
-        }
+      &:hover {
+        color: ${props => props.theme.compColor};
       }
     }
 
@@ -104,70 +154,19 @@ const ResumeBody = styled.div`
         content: "";
       }
     }
-    pre {
-      margin: 1.2rem;
-      padding: 1rem 2rem;
-      background-color: ${props => props.theme.grayColor_light};
-      code {
-        background-color: ${props => props.theme.grayColor_light};
-        color: ${props => props.theme.basicColor};
-        text-shadow: none;
-        .token {
-          background-color: ${props => props.theme.grayColor_light};
-          &.function {
-            color: #0945d9;
-          }
-          &.keyword {
-            color: #e6b402;
-          }
-          &.constant {
-            color: #8002e6;
-          }
-          &.operator {
-            color: #5299ff;
-          }
-          &.string {
-            color: #00b738;
-          }
-          &.punctuation {
-            color: #9e9e9e;
-          }
-          &.template-string {
-            color: #006d3e;
-          }
-          &.comment {
-            color: #b0b0b0;
-          }
-          &.attr-name {
-            color: #007804;
-          }
-          &.tags {
-            color: #d348ab;
-          }
-          &.boolean {
-            color: #ff2b00;
-          }
-          &.literal-property {
-            color: #6b0000;
-            &.property {
-              color: #6b0000;
-            }
-          }
-        }
-      }
-    }
   }
 `;
 
 const Resume = ({ data, location }) => {
   const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+  const { html } = markdownRemark;
 
   return (
     <ResumeLayout>
       <Seo title="이력서" />
       <Wrapper>
-        <Title>{frontmatter.title}</Title>
+        <Title>이력서</Title>
+
         <ResumeBody>
           <div
             className="resume-content"
