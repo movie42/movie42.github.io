@@ -29,6 +29,7 @@ const Title = styled.h1`
 `;
 
 const ResumeBody = styled.div`
+  margin-bottom: 20rem;
   .intro {
     margin: 1rem 0;
   }
@@ -38,8 +39,48 @@ const ResumeBody = styled.div`
     }
   }
 
+  .project {
+    .project-container {
+      box-sizing: border-box;
+      padding: 1rem 2rem;
+      border-top: 1px solid ${props => props.theme.grayColor};
+
+      .project-section {
+        padding: 1rem 1rem;
+        .period {
+          word-spacing: 120%;
+          font-weight: 100;
+        }
+        .project-list {
+          margin-top: 1rem;
+          ul {
+            li {
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+      ul {
+        margin: 1rem 0;
+      }
+      .project-stack {
+        margin: 0 0.5rem;
+        .project-stack-title {
+          margin: 0.5rem 0;
+        }
+        span {
+          img {
+            border-radius: 0.4rem;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
   .resume-content {
-    max-width: 102rem;
+    max-width: 120rem;
     margin: 0 auto;
     line-height: 1.8;
     font-size: 1.7rem;
@@ -83,45 +124,16 @@ const ResumeBody = styled.div`
       font-size: 3.2rem;
     }
     h4 {
-      margin: 1.7rem 0;
       font-size: 2.4rem;
+      margin: 1.8rem 0;
     }
     h5 {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
     }
     a {
       color: ${props => props.theme.hlColor};
-    }
-
-    ol {
-      list-style: none;
-      counter-reset: li;
-      p {
-        display: inline-block;
-      }
-      li {
-        counter-increment: li;
-        &:before {
-          content: counter(li);
-          color: ${props => props.theme.hlColor_dark};
-          display: inline-block;
-          width: 1em;
-          margin-left: -1em;
-        }
-        ul {
-          list-style: none;
-          counter-reset: unset;
-          li {
-            counter-increment: unset;
-            &:before {
-              content: "-";
-              color: ${props => props.theme.hlColor_dark};
-              display: inline-block;
-              width: 1em;
-              margin-left: -1em;
-            }
-          }
-        }
+      &:hover {
+        color: ${props => props.theme.compColor};
       }
     }
 
@@ -142,64 +154,12 @@ const ResumeBody = styled.div`
         content: "";
       }
     }
-    pre {
-      margin: 1.2rem;
-      padding: 1rem 2rem;
-      background-color: ${props => props.theme.grayColor_light};
-      code {
-        background-color: ${props => props.theme.grayColor_light};
-        color: ${props => props.theme.basicColor};
-        text-shadow: none;
-        .token {
-          background-color: ${props => props.theme.grayColor_light};
-          &.function {
-            color: #0945d9;
-          }
-          &.keyword {
-            color: #e6b402;
-          }
-          &.constant {
-            color: #8002e6;
-          }
-          &.operator {
-            color: #5299ff;
-          }
-          &.string {
-            color: #00b738;
-          }
-          &.punctuation {
-            color: #9e9e9e;
-          }
-          &.template-string {
-            color: #006d3e;
-          }
-          &.comment {
-            color: #b0b0b0;
-          }
-          &.attr-name {
-            color: #007804;
-          }
-          &.tags {
-            color: #d348ab;
-          }
-          &.boolean {
-            color: #ff2b00;
-          }
-          &.literal-property {
-            color: #6b0000;
-            &.property {
-              color: #6b0000;
-            }
-          }
-        }
-      }
-    }
   }
 `;
 
 const Resume = ({ data, location }) => {
   const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+  const { html } = markdownRemark;
 
   return (
     <ResumeLayout>
