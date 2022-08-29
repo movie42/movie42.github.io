@@ -131,6 +131,14 @@ const PostBody = styled.div`
         }
       }
     }
+    code {
+      padding: 0 0.7rem;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 1.6rem;
+      color: white;
+      text-shadow: none;
+      background-color: #1b1e2b;
+    }
 
     blockquote {
       position: relative;
