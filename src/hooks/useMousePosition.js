@@ -7,7 +7,6 @@ export default function useMousePosition() {
     function handlePosition(e) {
       setMousePosition({ x: e.pageX, y: e.pageY });
     }
-
     window.addEventListener("mousemove", handlePosition);
     return () => window.removeEventListener("mousemove", handlePosition);
   }, []);
