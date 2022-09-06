@@ -22,6 +22,7 @@
     "gatsby-plugin-styled-components": "^5.21.0",
     "gatsby-plugin-typography": "^4.21.0",
     "gatsby-remark-copy-relative-linked-files": "^1.5.0",
+    "gatsby-remark-embed-video": "^3.2.1",
     "gatsby-remark-images": "^6.21.0",
     "gatsby-remark-prismjs": "^6.21.0",
     "gatsby-source-filesystem": "^4.21.1",

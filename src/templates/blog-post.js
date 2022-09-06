@@ -57,6 +57,15 @@ const PostBody = styled.div`
     line-height: 1.8;
     font-size: 1.9rem;
     letter-spacing: -0.1rem;
+    .embeded-video {
+      width: 100%;
+      margin: 0 auto;
+      aspect-ratio: 2 / 1;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
     h1,
     h2,
     h3,
@@ -83,11 +92,18 @@ const PostBody = styled.div`
     a {
       color: ${props => props.theme.hlColor};
     }
-    p {
-      margin: 3rem 0;
-    }
 
+    ol {
+      li {
+        list-style: decimal;
+      }
+    }
     ul {
+      li {
+        list-style: disc;
+      }
+    }
+    /* ul {
       li {
         list-style: disc;
         ul {
@@ -113,6 +129,7 @@ const PostBody = styled.div`
         &:after {
           position: absolute;
           bottom: 0.6rem;
+          top: 0;
           left: 0;
           content: ".";
           color: black;
@@ -130,7 +147,7 @@ const PostBody = styled.div`
           }
         }
       }
-    }
+    } */
     code {
       padding: 0 0.7rem;
       font-family: "JetBrains Mono", monospace;
