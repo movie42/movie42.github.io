@@ -57,10 +57,23 @@ const PostBody = styled.div`
     line-height: 1.8;
     font-size: 1.9rem;
     letter-spacing: -0.1rem;
+    p {
+      img {
+        margin: 0 auto;
+      }
+    }
+    .remark {
+      margin-top: -1.6rem;
+      padding: 0;
+      small {
+        margin: 0;
+        padding: 0;
+      }
+    }
     .embeded-video {
       width: 100%;
       margin: 0 auto;
-      aspect-ratio: 2 / 1;
+      aspect-ratio: 16 / 9;
       iframe {
         width: 100%;
         height: 100%;
@@ -92,7 +105,9 @@ const PostBody = styled.div`
     a {
       color: ${props => props.theme.hlColor};
     }
-
+    p {
+      margin: 1rem 0;
+    }
     ol {
       li {
         list-style: decimal;
@@ -103,60 +118,6 @@ const PostBody = styled.div`
         list-style: disc;
       }
     }
-    /* ul {
-      li {
-        list-style: disc;
-        ul {
-          li {
-            list-style: circle;
-          }
-        }
-      }
-    }
-    ol {
-      list-style: disc;
-      counter-reset: li;
-      li {
-        position: relative;
-        counter-increment: li;
-        &:before {
-          content: counter(li);
-          color: ${props => props.theme.hlColor_dark};
-          display: inline-block;
-          width: 1em;
-          margin-left: -1em;
-        }
-        &:after {
-          position: absolute;
-          bottom: 0.6rem;
-          top: 0;
-          left: 0;
-          content: ".";
-          color: black;
-          display: inline-block;
-          width: 1em;
-          margin: -0.7rem;
-        }
-        p {
-          display: inline-block;
-        }
-        ul {
-          counter-reset: unset;
-          li {
-            counter-increment: unset;
-          }
-        }
-      }
-    } */
-    code {
-      padding: 0 0.7rem;
-      font-family: "JetBrains Mono", monospace;
-      font-size: 1.6rem;
-      color: white;
-      text-shadow: none;
-      background-color: #1b1e2b;
-    }
-
     blockquote {
       position: relative;
       word-break: keep-all;
@@ -176,12 +137,13 @@ const PostBody = styled.div`
     }
 
     pre {
-      margin: 4rem 0;
+      margin: 1rem auto;
       padding: 1rem 2rem;
       background-color: #1b1e2b;
       border-radius: 0.8rem;
       code {
         font-family: "JetBrains Mono", monospace;
+
         font-size: 1.6rem;
         letter-spacing: -0.01rem;
         background-color: #1b1e2b;
