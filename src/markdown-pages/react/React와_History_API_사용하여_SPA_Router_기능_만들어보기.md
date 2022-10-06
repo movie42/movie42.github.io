@@ -387,3 +387,4 @@ path tree를 구성하는 방법은 재귀로 되어있었다. 맨날 알고리�
 - [리액트의 렌더링은 어떻게 일어나는가?, yceffort](https://yceffort.kr/2022/04/deep-dive-in-react-rendering#%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8context%EC%99%80-%EB%A0%8C%EB%8D%94%EB%A7%81-%EB%8F%99%EC%9E%91)
 - [Window.history, MDN](https://developer.mozilla.org/ko/docs/Web/API/Window/history)
 - [Window.location, MDN](https://developer.mozilla.org/ko/docs/Web/API/Window/location)
+- [vanilla JS로 라우팅, obov note](https://obov.github.io/javscript/RoutingInVanilla/)
