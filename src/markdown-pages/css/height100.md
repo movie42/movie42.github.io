@@ -31,7 +31,17 @@ MDN에 [height](https://developer.mozilla.org/en-US/docs/Web/CSS/height)는 다�
 
 ![박스 모델](<https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model/boxmodel-(3).png>)
 
-<div class="remark"><small>이미지 출처 - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area" target="_blank">MDN Introduction to the CSS basic box model</a></small></div>
+<div class="remark">
+  <small>
+    이미지 출처 -{" "}
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area"
+      target="_blank"
+    >
+      MDN Introduction to the CSS basic box model
+    </a>
+  </small>
+</div>
 
 **content area**는 content edge에 의해 경계가 지정되고 실제 컨텐츠를 포함한 영역이다. box-sizing 속성은 content-box가 기본값이고 이 엘리먼트가 블록 엘리먼트인 경우에 컨텐 영역의 사이즈는 with, min-width, max-width, height, min-height, max-height 속성으로 명시적으로 정의될 수 있다.
 
@@ -68,7 +78,14 @@ height: unset;
 
 <div class="remark">
   <small>
-  코드 출처 - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height#syntax" target="_blank"> MDN height Syntax</a>
+    코드 출처 -{" "}
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/CSS/height#syntax"
+      target="_blank"
+    >
+      {" "}
+      MDN height Syntax
+    </a>
   </small>
 </div>
 
@@ -88,9 +105,7 @@ height: unset;
 
 그럼 height의 길이는 어떻게 결정되는 걸까? 나름대로 위의 이론을 바탕으로 예제를 만들어 보았다.
 
-<div class="embeded-video">
-<iframe src="https://stackblitz.com/edit/js-t515g4?embed=1&file=style.css"></iframe>
-</div>
+<iframe-container iframeLink="https://stackblitz.com/edit/js-t515g4?embed=1&file=style.css"></iframe-container>
 
 ```css
 html,
@@ -177,7 +192,7 @@ div {
 4. 그럼 body에 높이 값을 절대나 상대 값으로 주게되면 height가 계산된다.
 
 <div class="embeded-video">
-<iframe src="https://stackblitz.com/edit/js-jzapxe?embed=1&file=style.css"></iframe>
+  <iframe src="https://stackblitz.com/edit/js-jzapxe?embed=1&file=style.css"></iframe>
 </div>
 
 위의 예제에서 컨텐츠의 맥락을 형성하는 가장 가까운 엘리먼트는 부모 컨테이너이고 div.percent의 부모는 body이다. 여기서 만약 div를 다른 엘리먼트로 감싸게 되면 height가 사라져버린다.
@@ -187,7 +202,7 @@ div {
 방법과 상황은 여러 가지가 있다. 중요한 것은 이미지의 높이를 100%로 주었을 때, 브라우저가 엘리먼트의 높이를 결정하는 원리에 대해서 이해하고 있는 것이다. 카드형 UI를 만드는 것은 크게 어렵지 않지만 어떤 원리로 height의 퍼센테이지 값이 계산되는지 원리를 아는 것이 중요하다.
 
 <div class="embeded-video">
-<iframe src="https://stackblitz.com/edit/js-3z9utt?embed=1&file=style.css"></iframe>
+  <iframe src="https://stackblitz.com/edit/js-3z9utt?embed=1&file=style.css"></iframe>
 </div>
 
 [예제](https://stackblitz.com/edit/js-3z9utt?file=index.js,index.html,style.css)는 브라우저의 넓이가 변할 때 일정한 비율로 넓이와 높이가 변경되는 이미지 컨테이너다. height는 퍼센테이지 값으로 주었다.

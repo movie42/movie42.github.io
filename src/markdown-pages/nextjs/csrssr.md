@@ -5,8 +5,6 @@ title: "CSR SSR과 NextJS"
 tags: ["CSR", "SSR", "nextJS"]
 ---
 
-원티드 프리온보팅 10월 챌린지 과제로 CSR과 SSR 그리고 NextJS에 대해서 공부한 것을 포스팅합니다.
-
 # CSR
 
 역사적으로 Client Side Rendering은 스테틱 사이트가 주를 이루던 시대에 자바스크립트를 통해 웹 페이지를 동적으로 동작시키기 위해 AJAX가 등장하고 난 뒤 이를 사용하여 만든 SPA(Single Page Application)가 등장하면서 생기기 시작한 기술이다.
