@@ -81,7 +81,17 @@ data-styled.g14[id="blog-post__PostBody-sc-i0xqqq-1"]{content:"dFsrkI,"}/*!sc*/
 <h2>박스 모델의 기본</h2>
 <p>문서에 걸려있는 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area">링크</a>를 타고 가면 css의 기본 box model을 볼 수 있다. 거기에 content area와 border area의 정의를 알 수 있다. 모든 박스는 content edge, padding edge, border edge, margin edge로 구성된다.</p>
 <p><img src="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model/boxmodel-(3).png" alt="박스 모델"></p>
-<div class="remark"><small>이미지 출처 - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area" target="_blank">MDN Introduction to the CSS basic box model</a></small></div>
+<div class="remark">
+  <small>
+    이미지 출처 -{" "}
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area"
+      target="_blank"
+    >
+      MDN Introduction to the CSS basic box model
+    </a>
+  </small>
+</div>
 <p><strong>content area</strong>는 content edge에 의해 경계가 지정되고 실제 컨텐츠를 포함한 영역이다. box-sizing 속성은 content-box가 기본값이고 이 엘리먼트가 블록 엘리먼트인 경우에 컨텐 영역의 사이즈는 with, min-width, max-width, height, min-height, max-height 속성으로 명시적으로 정의될 수 있다.</p>
 <p><strong>border area</strong>는 border edge를 경계로 엘리먼트의 border를 포함하도록 padding 영역을 확장한다. border의 크기는 border-width 또는 border 속성을 통해 결정된다. 만약 box-sizing 속성이 border-box로 되어있으면 border area의 크기는 width, min-width, max-width, height, min-height, max-height 속성으로 명시할 수 있다.</p>
 <p><a href="https://stackblitz.com/edit/js-ixc4fq?embed=1&#x26;file=style.css">박스 모델 예제</a></p>
@@ -109,7 +119,14 @@ data-styled.g14[id="blog-post__PostBody-sc-i0xqqq-1"]{content:"dFsrkI,"}/*!sc*/
 <span class="token property">height</span><span class="token punctuation">:</span> unset<span class="token punctuation">;</span></code></pre></div>
 <div class="remark">
   <small>
-  코드 출처 - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height#syntax" target="_blank"> MDN height Syntax</a>
+    코드 출처 -{" "}
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/CSS/height#syntax"
+      target="_blank"
+    >
+      {" "}
+      MDN height Syntax
+    </a>
   </small>
 </div>
 <p>자주 쓰는 값만 살펴보면 length값은 높이의 절대값이다. percentage값은 컨테이닝 블록 높이의 백분율이다. auto는 브라우저가 요소의 높이를 계산하고 선택한다.</p>
@@ -122,9 +139,7 @@ data-styled.g14[id="blog-post__PostBody-sc-i0xqqq-1"]{content:"dFsrkI,"}/*!sc*/
 </blockquote>
 <p><strong>백분율</strong>은 항상 다른 값에 상대적으로 설정된다. width에 백분율을 적용하면 부모의 너비의 백분율이 된다.</p>
 <p>그럼 height의 길이는 어떻게 결정되는 걸까? 나름대로 위의 이론을 바탕으로 예제를 만들어 보았다.</p>
-<div class="embeded-video">
-<iframe src="https://stackblitz.com/edit/js-t515g4?embed=1&file=style.css"></iframe>
-</div>
+<p><iframe-container iframeLink="https://stackblitz.com/edit/js-t515g4?embed=1&file=style.css"></iframe-container></p>
 <div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">html,
 body</span> <span class="token punctuation">{</span>
   <span class="token property">font-size</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
@@ -201,13 +216,13 @@ body</span> <span class="token punctuation">{</span>
 <li>그럼 body에 높이 값을 절대나 상대 값으로 주게되면 height가 계산된다.</li>
 </ol>
 <div class="embeded-video">
-<iframe src="https://stackblitz.com/edit/js-jzapxe?embed=1&file=style.css"></iframe>
+  <iframe src="https://stackblitz.com/edit/js-jzapxe?embed=1&file=style.css"></iframe>
 </div>
 <p>위의 예제에서 컨텐츠의 맥락을 형성하는 가장 가까운 엘리먼트는 부모 컨테이너이고 div.percent의 부모는 body이다. 여기서 만약 div를 다른 엘리먼트로 감싸게 되면 height가 사라져버린다.</p>
 <h1>넓이와 높이가 일정한 비율을 유지하는 이미지 UI 만들기</h1>
 <p>방법과 상황은 여러 가지가 있다. 중요한 것은 이미지의 높이를 100%로 주었을 때, 브라우저가 엘리먼트의 높이를 결정하는 원리에 대해서 이해하고 있는 것이다. 카드형 UI를 만드는 것은 크게 어렵지 않지만 어떤 원리로 height의 퍼센테이지 값이 계산되는지 원리를 아는 것이 중요하다.</p>
 <div class="embeded-video">
-<iframe src="https://stackblitz.com/edit/js-3z9utt?embed=1&file=style.css"></iframe>
+  <iframe src="https://stackblitz.com/edit/js-3z9utt?embed=1&file=style.css"></iframe>
 </div>
 <p><a href="https://stackblitz.com/edit/js-3z9utt?file=index.js,index.html,style.css">예제</a>는 브라우저의 넓이가 변할 때 일정한 비율로 넓이와 높이가 변경되는 이미지 컨테이너다. height는 퍼센테이지 값으로 주었다.</p>
 <p>여기에서 .child의 height 값이 계산될 수 있는 이유는 가장 가까운 맥락의 컨테이닝 블록(.parents)의 높이가 auto가 아니기 때문이다. 만약 값이 없다면 auto가 되고 .child의 height 값도 0이된다.</p>
