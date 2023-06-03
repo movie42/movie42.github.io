@@ -1,0 +1,14 @@
+{
+  "plugins": ["prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:mdx/recommended",
+    "plugin:prettier/recommended",
+    "next",
+    "next/core-web-vitals"
+  ],
+  "settings": {
+    "mdx/code-blocks": true,
+    "mdx/language-mapper": {}
+  }
+}
