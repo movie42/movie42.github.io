@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/",
   output: "export",
+  basePath: "/",
   experimental: {
+    appDir: true,
     mdxRs: true
   }
 };
